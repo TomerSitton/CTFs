@@ -1,0 +1,34 @@
+1. In the console, they say that there is an interesting js code.
+2. searching the files, we get the file https://www.hackthebox.eu/js/inviteapi.min.js with this code -
+
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0 3(){$.4({5:"6",7:"8",9:\'/b/c/d/e/f\',g:0(a){1.2(a)},h:0(a){1.2(a)}})}',18,18,'function|console|log|makeInviteCode|ajax|type|POST|dataType|json|url||api|invite|how|to|generate|success|error'.split('|'),0,{}))
+
+
+3. running the code online and printing the rasult (p) gets this function:
+function makeInviteCode(){$.ajax({type:"POST",dataType:"json",url:'/api/invite/how/to/generate',success:function(a){console.log(a)},error:function(a){console.log(a)}})}
+
+4. running this function returns "<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <title>Error</title> </head> <body> <pre>Cannot POST /api/invite/how/to/generate</pre> </body> </html> ".
+	so to generate the POST request and see the answer, we need to run THIS in chrome console:
+	
+	fetch('https://www.hackthebox.eu/api/invite/how/to/generate', {
+	  method: 'POST',
+	  body: JSON.stringify({
+		title: 'foo',
+		body: 'bar',
+		userId: 1
+	  }),
+	  headers: {
+		'Content-type': 'application/json; charset=UTF-8'
+	  }
+	})
+	.then(res => res.json())
+	.then(console.log)
+	
+	
+the result - "Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/vaivgr/trarengr" - ROT13 encrypted
+
+5. decrypting the message - "In order to generate the invite code, make a POST request to /api/invite/generate"
+
+6. making the request the same way as in point 4 (but with /api/invite/generate) returns - "RU9ZT0QtRUhSU0stQ1lXTk4tSEVGVVYtSUhYWUY="
+
+7. decode 64 returns the code! "EOYOD-EHRSK-CYWNN-HEFUV-IHXYF"

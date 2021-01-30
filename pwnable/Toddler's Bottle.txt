@@ -1,0 +1,6 @@
+1. fd
+
+The program runs atoi on input, subtract 0x1234 (4660), saves the value as a file descriptor and reads from it.
+0 is the file descriptor for stdin. so just input 4660, then LETMEWIN, and youre done!
+
+answer - ./fd 4660 --> LETMEWIN

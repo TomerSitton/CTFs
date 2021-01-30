@@ -1,0 +1,105 @@
+level1:
+
+in ltrace you can see the strcmp to "d(-_-)b//d(+_+)b\\d(-_-)b"
+
+answer = d(-_-)b//d(+_+)b\\d(-_-)b
+
+
+level2:
+
+The program gets input from the user, and stores it to an array of size 22h (arr1).
+Then, it calculates the hash of the given input, and compares it (using memcmp) to a pre-saved array.
+
+	* The saved array - 89349536319392163324855876422573
+
+	* The hash table (got that by running the loop in gdb and displaying r12 and rax in each iteration):
+		<input_array_index> -> <hashed_array_index> 
+		0 -> 2
+		1 -> 14
+		2 -> 26
+		3 -> 9
+		4 -> 21
+		5 -> 1
+		6 -> 13
+		7 -> 25
+		8 -> 5
+		9 -> 17
+		10 -> 29
+		11 -> 0
+		12 -> 12
+		13 -> 24
+		14 -> 4
+		15 -> 16
+		16 -> 28
+		17 -> 8
+		18 -> 20
+		19 -> 3
+		20 -> 15
+		21 -> 27
+		22 -> 7 
+		23 -> 19
+		24 -> 31
+		25 -> 11
+		26 -> 23
+		27 -> 6
+		28 -> 18
+		29 -> 30
+		30 -> 10
+		31 -> 22
+		
+answer = 31415926535897932384626433832795
+
+
+
+
+level3:
+1. The program gets 3 variables.
+2. for each letter in each variable, it checks if it is a valid hex value (if the value is between 0-9 or a-f).
+	it also check if the entire variable has no more than 16 bytes.
+	if it is not a valid hex value / is too long - the program fails
+3. for each variables - converts it to hex data and saves it
+4. calculates 3 equations for all the variables (x,y,z):
+	a. 2x + 3y + 2z
+	b. 4x + 2y + 3z
+	c. 9x + 6y + 7z
+5. the values should be 1 for each equation (because that way we dont go into the loop).
+	so the answers are:
+	x = -8, y = -3, z = 13
+6. hex values:
+	x = fffffff8, y = fffffffd, z = 0000000d
+	
+answer = fffffff8, fffffffd, 0000000d
+
+
+
+level4:
+The program reads data, char by char, from a file named "d.d". The data in that file should contain numbers from 0 to 2, which are the commands numbers.
+The program sets 0xdeadfacedeadbeef as input_data and 0x123456701234567 as result_data.
+The objective is to put the correct "commands numbers" in the "d.d" file, in order to change 0xdeadfacedeadbeef to 0x123456701234567.
+The commands are as follow:
+1. 0 - make the n'th byte 0, and decrease n
+2. 1 - make the n'th+1 byte 0, and increase n
+3. 2 - make the n'th+1 byte 1, and increase n
+n is initialized to be 64.
+
+
+So, the first 64 instructions should be 0 - in order to set 0xdeadfacedeadbeef to 0x0000000000000000, and set n to 0.
+Then, the other instructions should be 1111111211211122121112121221122211111112112111221211121212211222.
+that way, the 0x0000000000000000 (or in binary, 0000000000000000000000000000000000000000000000000000000000000000)
+will become 0x123456701234567 (or in binary, 0000000100100011010001010110011100000001001000110100010101100111).
+
+answer = a file named "d.d" which contains the text: 
+00000000000000000000000000000000000000000000000000000000000000001111111211211122121112121221122211111112112111221211121212211222
+
+
+level5:
+The program has an array in the data section.
+The program calls a function that calculates the sum of the array, then calls a function that order the array in a descending
+order, and then calls the sum function again. if the first and second sums are different - the program fails.
+
+
+
+
+
+
+
