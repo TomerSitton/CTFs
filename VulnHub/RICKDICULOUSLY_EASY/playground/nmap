@@ -1,0 +1,35 @@
+# Nmap 7.80 scan initiated Fri Apr 16 11:36:07 2021 as: nmap -sV -sC -o nmap 192.168.56.105
+Nmap scan report for 192.168.56.105
+Host is up (0.00065s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0              42 Aug 22  2017 FLAG.txt
+|_drwxr-xr-x    2 0        0               6 Feb 12  2017 pub
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.56.106
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open  tcpwrapped
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+80/tcp   open  http       Apache httpd 2.4.27 ((Fedora))
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.27 (Fedora)
+|_http-title: Morty's Website
+9090/tcp open  http       Cockpit web service
+|_http-title: Did not follow redirect to https://192.168.56.105:9090/
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 16 11:36:57 2021 -- 1 IP address (1 host up) scanned in 50.47 seconds
