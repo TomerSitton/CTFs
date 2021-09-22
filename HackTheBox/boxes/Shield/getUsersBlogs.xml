@@ -1,0 +1,7 @@
+<methodCall>
+<methodName>wp.getUsersBlogs</methodName>
+<params>
+<param><value>admin</value></param>
+<param><value>rockyou</value></param>
+</params>
+</methodCall>

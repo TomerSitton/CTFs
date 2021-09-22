@@ -1,0 +1,72 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Fri Feb 05 08:13:45 EST 2021
+--------------------------------
+
+http://10.10.10.29:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/wordpress/
+/wordpress/wp-content/
+/wordpress/wp-content/themes/
+/wordpress/index.php/blog/
+/wordpress/index.php/2020/
+/wordpress/index.php/2020/02/
+/wordpress/index.php/feed/
+
+Dirs found with a 403 response:
+
+/wordpress/wp-includes/
+/wordpress/wp-content/uploads/
+/wordpress/wp-includes/images/
+/wordpress/wp-includes/Images/
+/wordpress/wp-includes/text/
+/wordpress/wp-includes/Images/media/
+/wordpress/wp-includes/css/
+/wordpress/wp-content/upgrade/
+/wordpress/wp-includes/Images/smilies/
+
+Dirs found with a 301 response:
+
+/wordpress/index.php/
+/wordpress/index.php/0/
+/wordpress/index.php/atom/
+/wordpress/index.php/s/
+/wordpress/index.php/b/
+/wordpress/index.php/c/
+/wordpress/index.php/r/
+/wordpress/index.php/m/
+/wordpress/index.php/rss2/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 301 responce:
+
+/wordpress
+/wordpress/index.php
+/wordpress/Index.php
+
+Files found with a 200 responce:
+
+/wordpress/wp-content/index.php
+/wordpress/wp-login.php
+/wordpress/wp-includes/category.php
+/wordpress/wp-content/Index.php
+/wordpress/wp-includes/post.php
+/wordpress/wp-includes/comment.php
+/wordpress/wp-includes/template.php
+
+Files found with a 500 responce:
+
+/wordpress/wp-includes/rss.php
+/wordpress/wp-includes/media.php
+/wordpress/wp-includes/registration.php
+
+
+--------------------------------

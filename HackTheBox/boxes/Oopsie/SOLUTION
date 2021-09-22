@@ -1,0 +1,17 @@
+1. using nmap we can see that it listens on 80 and 22
+2. ssh with old password (MEGACORP_4dm1n!!) didn't work
+2. using "wget -r http://10.10.10.28/" we get all the web pages in the "crawler_output" dir, including "cdn-cgi/login".
+3. surfing and logging in with "admin" and "MEGACORP_4dm1n!!" works!
+4. we want to get the cookies in order to continue crawling. so we use:
+	"wget --keep-session-cookies --save-cookies=cookies.txt --post-data 'username=admin&password=MEGACORP_4dm1n%21%21' http://10.10.10.28/cdn-cgi/login/ -e use_proxy=yes -e http_proxy=127.0.0.1:8080"
+5. moving to the uploads page, we see we need to be super admins
+6. intruding the "id" parameter in the "http://10.10.10.28/cdn-cgi/login/admin.php?content=accounts&id=1" page, will give us the cookie of the "admin" user and the "superadmin" user!
+	(id=1):
+		Access ID - 34322
+		NAME - admin
+
+	(id=30)
+		Access ID - 86575
+		NAME - super admin
+
+

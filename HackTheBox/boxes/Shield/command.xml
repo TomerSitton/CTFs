@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<methodCall>
+	<methodName>wp.uploadFile</methodName>
+	<params>
+		<param><value><string>1</string></value></param>
+		<param><value><string>admin</string></value></param>
+		<param><value><string>password</string></value></param>
+		<param>
+			<value>
+				<struct>
+					<member>
+						<name>name</name>
+						<value><string>filename.jpg</string></value>
+					</member>
+					<member>
+						<name>type</name>
+						<value><string>mime/type</string></value>
+					</member>
+					<member>
+						<name>bits</name>
+						<value><base64>YmxhYmxhYmxhCg==</base64></value>
+					</member>
+				</struct>
+			</value>
+		</param>
+	</params>
+</methodCall>
