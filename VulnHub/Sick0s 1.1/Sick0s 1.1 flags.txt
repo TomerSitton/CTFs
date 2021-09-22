@@ -1,0 +1,29 @@
+BOX IP - 10.0.2.4
+
+first of all, it looks like the machine does not answer to pings.
+scanning it shows it is a "squid/3.1.19" and open on 22, 3128, 8080.
+
+
+1. set firefox to proxy through 10.0.10.4:3128
+2. enable proxy localhost in about:config "network.proxy.allow_hijacking_localhost". now we can surf to 127.0.0.1:80
+3. dirb on port 80 returns the results saved in dirbfiles
+4. in robots.txt we see the file wolfcms
+5. going to 127.0.0.1/wolfcms we find a website! the website uses wolf cms package
+6. dirb on that we can see some files that are also present in the github repository
+7. we can see that the articles are under "127.0.0.1/wolfcms/?articles/2015....".
+   dirn "127.0.0.1/wolfcms/?" returns some pages. on of them is 127.0.0.1/wolfcms/admin.
+   surf to that and we are redirected to the login page! "127.0.0.1/wolfcms/?/admin/login"
+8. The administrator panel have an upload file feature!
+   upload php backdoor and find its location according to the github repository - /wolfcms/public/simple-backdoor.php
+   
+9. upload reverse shell the same way XD
+10. in the config.php file of wolfcms, we find the root password:
+	define('DB_DSN', 'mysql:dbname=wolf;host=localhost;port=3306')
+	define('DB_USER', 'root')
+	define('DB_PASS', 'john@123')
+	
+	sadly, the password doesnt work :(
+
+11. the /var/www/connect.py file has 777 permissions. 
+	adding the line "os/system(echo bla >> /tmp/bla)" shows that it is, indeed, runs frequently!
+	the reason is the file /etc/cron.d/automate that runs the file as root every minute.

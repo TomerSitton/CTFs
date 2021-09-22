@@ -1,0 +1,64 @@
+There are 130 points worth of flags available
+
+
+
+1. by nmap surf to port 9090 - FLAG {THERE IS NO ZEUS, IN YOUR FACE!} - 10 POINTS
+
+2. Anonymous FTP connection and get flag:
+	FLAG{Whoa this is unexpected} - 10 Points
+
+2. in robots.txt you have /cgi-bin/tracertool.cgi. use command injection:
+	192.168.56.106; ls -R /var/www
+   surf to 192.168.56.106/passwords/FLAG.txt
+	FLAG{Yeah d- just don't do it.} - 10 Points
+
+3. dir on /var/www shows the file "password.txt" with a comment "Password: winter".
+   tail on etc/passwd (from tracertool) - there is a user named "Summer"
+   connect with FTP to user:"Summer" password:"winter"
+	get FLAG.txt
+		FLAG{Get off the high road Summer!} - 10 Points
+	
+
+4. running nmap on ALL possible ports, we find the flag on port 13337 (also found by running nc to that port):
+	FLAG:{TheyFoundMyBackDoorMorty}-10Points
+
+5. connecting to "Ricks half baked reverse shell" on port 60000 shows us that we are root and returns the flag:
+	FLAG: {Flip the pickle Morty!} - 10 Points
+	
+6. connect to SSH on port 22222 with user Summer and password winter
+	head on Morty's "Safe_Password.jpg":
+		"The Safe Password: File: /home/Morty/journal.txt.zip. Password:Meeseek
+		extract it to Summers dir returns this flag:
+		FLAG: {131333} - 20 Points
+
+7. copied the safe file from rick's dir to mine. execute it with password 131333 and got the flag:
+	FLAG{AND Awwwaaaaayyyy we Go!} - 20 Points
+	
+8. run su bruteforce script (bruteforce.sh) to get Ricks password - P7Curtains:
+
+9. sudo /root and get the flag! 
+	FLAG: {Ionic Defibrillator} - 30 Points
+
+
+
+
+?. after reading the js on port 9090, i saw that the login request is a GET request sent to "192.168.56.105:9090/cockpit/login"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+questions for broder:
+1. why cant run netstat on tracertool?
+2. why cant run nc on tracertool?
