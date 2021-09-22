@@ -1,0 +1,437 @@
+HTTP/1.1 200 OK
+Date: Sat, 15 May 2021 11:55:29 GMT
+Server: Apache/2.2.17 (Ubuntu)
+X-Powered-By: PHP/5.3.5-1ubuntu7
+Vary: Accept-Encoding
+Content-Length: 17973
+Connection: close
+Content-Type: text/html
+
+<pre>.:
+total 96
+drwxr-xr-x  4 root root  4096 May 15 05:18 .
+drwxr-xr-x 16 root root  4096 May  7  2011 ..
+-rw-r--r--  1 root root  1374 Mar 24  2008 activate.php
+-rw-rw-rw-  1 root root    45 May 15 04:46 bla.php
+-rw-rw-rw-  1 root root     0 May 15 05:39 bla.txt
+-rw-rw-rw-  1 root root    37 May 15 04:50 bla2.php
+-rw-rw-rw-  1 root root 14616 May 15 04:14 bla2.txt
+-rw-rw-rw-  1 root root    39 May 15 04:53 bla3.php
+-rw-rw-rw-  1 root root    29 May 15 04:20 bla3.txt
+-rw-rw-rw-  1 root root    37 May 15 04:54 bla4.php
+-rw-rw-rw-  1 root root   104 May 15 04:37 bla4.txt
+-rw-rw-rw-  1 root root    37 May 15 04:55 bla5.php
+-rw-rw-rw-  1 root root     0 May 15 04:38 bla5.txt
+-rw-rw-rw-  1 root root   141 May 15 04:55 bla6.php
+drwxrwxrwx 11 root root  4096 May  9  2011 blog
+drwxr-xr-x  2 root root  4096 May  7  2011 includes
+-rw-r--r--  1 root root   629 May  7  2011 index.php
+-rw-r--r--  1 root root    23 Apr  3  2008 info.php
+-rw-r--r--  1 root root  3091 May  7  2011 login.php
+-rw-r--r--  1 root root   516 Apr  2  2008 mysqli_connect.php
+-rw-r--r--  1 root root  4618 Apr  2  2008 register.php
+-rw-rw-rw-  1 root root   124 May 15 05:18 test_shell.php
+
+./blog:
+total 360
+drwxrwxrwx 11 root     root      4096 May  9  2011 .
+drwxr-xr-x  4 root     root      4096 May 15 05:18 ..
+-rwxrwxrwx  1 root     root      5952 Dec 28  2004 add.php
+-rwxrwxrwx  1 root     root      6183 Dec 27  2004 add_block.php
+-rwxrwxrwx  1 root     root      4609 Dec 28  2004 add_cgi.php
+-rwxrwxrwx  1 root     root      5781 Jan 18  2005 add_link.php
+-rw-rw-rw-  1 root     root      4496 Jan  2  2005 add_static.php
+-rwxrwxrwx  1 root     root      1675 Oct 18  2004 add_static_cgi.php
+-rwxrwxrwx  1 root     root       403 Nov  8  2004 atom.php
+-rwxrwxrwx  1 root     root     10835 Jan  6  2005 categories.php
+-rwxrwxrwx  1 root     root      7516 Nov 30  2004 colors.php
+-rwxrwxrwx  1 root     root      2519 Nov 30  2004 colors_cgi.php
+-rwxrwxrwx  1 root     root      2720 Jan  4  2005 comment_add_cgi.php
+-rwxrwxrwx  1 root     root      1778 Oct 18  2004 comment_delete_cgi.php
+-rwxrwxrwx  1 root     root     10194 Jan  4  2005 comments.php
+drwxrwxrwx  2 www-data www-data  4096 May  9  2011 config
+-rwxrwxrwx  1 root     root      2374 Nov 22  2004 contact.php
+-rwxrwxrwx  1 root     root      1560 Jan 18  2005 contact_cgi.php
+drwxrwxrwx  3 www-data www-data  4096 May  9  2011 content
+-rwxrwxrwx  1 root     root      3039 Oct 18  2004 delete.php
+-rwxrwxrwx  1 root     root      3285 Oct 18  2004 delete_static.php
+drwxrwxrwx  2 root     root      4096 Jan 18  2005 docs
+-rwxrw-rw-  1 root     root      1001 Nov 28  2004 downgrade.php
+drwxrwxrwx  2 root     root      4096 Jan 18  2005 flash
+-rwxrwxrwx  1 root     root      1201 Sep 20  2004 image_list.php
+drwxrwxrwx  2 www-data www-data  4096 May  9  2011 images
+-rwxrwxrwx  1 root     root      4754 Jan 18  2005 index.php
+-rwxrwxrwx  1 root     root      4185 Oct 18  2004 info.php
+-rwxrwxrwx  1 root     root      2282 Sep 20  2004 install00.php
+-rwxrwxrwx  1 root     root      1530 Sep 20  2004 install01.php
+-rwxrwxrwx  1 root     root      2650 Sep 20  2004 install02.php
+-rwxrwxrwx  1 root     root      2239 Sep 20  2004 install03.php
+-rwxrwxrwx  1 root     root      1558 Sep 20  2004 install03_cgi.php
+drwxrwxrwx  3 root     root      4096 Jan 18  2005 interface
+drwxrwxrwx 19 root     root      4096 Jan 18  2005 languages
+-rwxrw-rw-  1 root     root      2780 Jan  1  2005 languages.php
+-rwxrw-rw-  1 root     root      5294 Jan  1  2005 languages_cgi.php
+-rwxrwxrwx  1 root     root      1975 Sep 20  2004 login.php
+-rwxrwxrwx  1 root     root      1685 Jan 18  2005 login_cgi.php
+-rwxrwxrwx  1 root     root      1059 Sep 20  2004 logout.php
+-rwxrwxrwx  1 root     root     22803 Nov 29  2004 options.php
+-rwxrwxrwx  1 root     root      2358 Oct 18  2004 options_cgi.php
+-rwxrwxrwx  1 root     root      7789 Dec 28  2004 preview_cgi.php
+-rwxrwxrwx  1 root     root      5984 Dec 27  2004 preview_static_cgi.php
+-rwxrwxrwx  1 root     root      2307 Jan  2  2005 rate_cgi.php
+-rwxrwxrwx  1 root     root       400 Nov  8  2004 rdf.php
+-rwxrwxrwx  1 root     root       908 Sep 20  2004 recompress.php
+-rwxrwxrwx  1 root     root       400 Nov  8  2004 rss.php
+drwxrwxrwx  2 root     root      4096 Jan 18  2005 scripts
+-rwxrwxrwx  1 root     root      1348 Sep 20  2004 search.php
+-rwxrwxrwx  1 root     root      2025 Sep 20  2004 set_login.php
+-rwxrwxrwx  1 root     root      1345 Sep 20  2004 set_login_cgi.php
+-rwxrwxrwx  1 root     root     12027 Nov 29  2004 setup.php
+-rwxrwxrwx  1 root     root      2886 Nov 29  2004 setup_cgi.php
+-rwxrwxrwx  1 root     root      1616 Oct 18  2004 static.php
+-rw-rw-rw-  1 root     root      6904 Jan 18  2005 stats.php
+drwxrwxrwx  4 root     root      4096 Jan 18  2005 themes
+-rwxrwxrwx  1 root     root      3383 Oct 18  2004 themes.php
+-rwxrw-rw-  1 root     root      7956 Nov 27  2004 trackback.php
+-rw-rw-rw-  1 root     root      1745 Nov 24  2004 trackback_delete_cgi.php
+-rwxrw-rw-  1 root     root       922 Jan 18  2005 upgrade.php
+-rw-rw-rw-  1 root     root      1489 Jun 17  2004 upload_img.php
+-rwxrwxrwx  1 root     root      1929 Oct 18  2004 upload_img_cgi.php
+-rwxrwxrwx  1 root     root      9972 Sep 28  2004 upload_img_new.php
+
+./blog/config:
+total 16
+drwxrwxrwx  2 www-data www-data 4096 May  9  2011 .
+drwxrwxrwx 11 root     root     4096 May  9  2011 ..
+-rw-r--r--  1 www-data www-data  108 May  9  2011 config.txt
+-rw-r--r--  1 www-data www-data   34 May  9  2011 password.txt
+
+./blog/content:
+total 12
+drwxrwxrwx  3 www-data www-data 4096 May  9  2011 .
+drwxrwxrwx 11 root     root     4096 May  9  2011 ..
+drwxrwxrwx  3 www-data www-data 4096 May  9  2011 11
+
+./blog/content/11:
+total 12
+drwxrwxrwx 3 www-data www-data 4096 May  9  2011 .
+drwxrwxrwx 3 www-data www-data 4096 May  9  2011 ..
+drwxrwxrwx 2 www-data www-data 4096 May  9  2011 05
+
+./blog/content/11/05:
+total 12
+drwxrwxrwx 2 www-data www-data 4096 May  9  2011 .
+drwxrwxrwx 3 www-data www-data 4096 May  9  2011 ..
+-rw-r--r-- 1 www-data www-data  234 May  9  2011 entry110509-191340.txt
+
+./blog/docs:
+total 44
+drwxrwxrwx  2 root root 4096 Jan 18  2005 .
+drwxrwxrwx 11 root root 4096 May  9  2011 ..
+-rwxrwxrwx  1 root root 4206 Jan 18  2005 CHANGELOG.TXT
+-rwxrwxrwx  1 root root 1764 Jan 18  2005 CREDITS.TXT
+-rwxrwxrwx  1 root root 1469 Sep 20  2004 INSTALL.TXT
+-rwxrwxrwx  1 root root  875 Jan 18  2005 README.TXT
+-rwxrwxrwx  1 root root 4733 Jan 18  2005 TODO.TXT
+-rwxrw-rw-  1 root root  877 Nov 28  2004 TRACKBACKS.TXT
+-rwxrwxrwx  1 root root  813 Jan 18  2005 UPGRADING.TXT
+
+./blog/flash:
+total 164
+drwxrwxrwx  2 root root   4096 Jan 18  2005 .
+drwxrwxrwx 11 root root   4096 May  9  2011 ..
+-rw-rw-rw-  1 root root 145408 Nov 30  2004 color_picker.fla
+-rw-rw-rw-  1 root root  11832 Nov 30  2004 color_picker.swf
+
+./blog/images:
+total 8
+drwxrwxrwx  2 www-data www-data 4096 May  9  2011 .
+drwxrwxrwx 11 root     root     4096 May  9  2011 ..
+
+./blog/interface:
+total 48
+drwxrwxrwx  3 root root 4096 Jan 18  2005 .
+drwxrwxrwx 11 root root 4096 May  9  2011 ..
+-rwxrwxrwx  1 root root  275 Sep 22  2004 button_atom03.png
+-rwxrwxrwx  1 root root  280 Aug 23  2004 button_php.png
+-rwxrwxrwx  1 root root  281 Sep 22  2004 button_rdf10.png
+-rwxrwxrwx  1 root root  289 Sep 22  2004 button_rss20.png
+-rwxrwxrwx  1 root root  702 Aug 23  2004 button_sphpblog.png
+-rwxrwxrwx  1 root root  365 Aug 23  2004 button_txt.png
+-rwxrwxrwx  1 root root 1078 Sep 15  2004 favicon.ico
+-rwxrwxrwx  1 root root 2645 Sep 15  2004 feed.png
+drwxrwxrwx  2 root root 4096 Jan 18  2005 filebrowser
+-rwxrwxrwx  1 root root 2645 Aug 23  2004 simple_php_blog.png
+
+./blog/interface/filebrowser:
+total 20
+drwxrwxrwx 2 root root 4096 Jan 18  2005 .
+drwxrwxrwx 3 root root 4096 Jan 18  2005 ..
+-rwxrwxrwx 1 root root  145 Sep 20  2004 file_icon.gif
+-rwxrwxrwx 1 root root   88 Sep 20  2004 folder_icon.gif
+-rwxrwxrwx 1 root root   43 Sep 20  2004 spacer.gif
+
+./blog/languages:
+total 76
+drwxrwxrwx 19 root root 4096 Jan 18  2005 .
+drwxrwxrwx 11 root root 4096 May  9  2011 ..
+drwxrwxrwx  2 root root 4096 Jan 18  2005 chinese
+drwxrwxrwx  2 root root 4096 Jan 18  2005 danish
+drwxrwxrwx  2 root root 4096 Jan 18  2005 dutch
+drwxrwxrwx  2 root root 4096 Jan 18  2005 dutch nieuw
+drwxrwxrwx  2 root root 4096 Jan 18  2005 english
+drwxrwxrwx  2 root root 4096 Jan 18  2005 french
+drwxrwxrwx  2 root root 4096 Jan 18  2005 german01
+drwxrwxrwx  2 root root 4096 Jan 18  2005 italiano
+drwxrwxrwx  2 root root 4096 Jan 18  2005 japanese
+drwxrwxrwx  2 root root 4096 Jan 18  2005 malay
+drwxrwxrwx  2 root root 4096 Jan 18  2005 portuguese
+drwxrwxrwx  2 root root 4096 Jan 18  2005 russian_koi8-ru
+drwxrwxrwx  2 root root 4096 Jan 18  2005 russian_windows-1251
+drwxrwxrwx  2 root root 4096 Jan 18  2005 spanish
+drwxrwxrwx  2 root root 4096 Jan 18  2005 tamil
+drwxrwxrwx  2 root root 4096 Jan 18  2005 turkish
+drwxrwxrwx  2 root root 4096 Jan  4  2005 zh_chinese
+
+./blog/languages/chinese:
+total 40
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     7 Jun  1  2004 id.txt
+-rw-rw-rw-  1 root root 26722 Jan 18  2005 strings.php
+
+./blog/languages/danish:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     6 May 13  2004 id.txt
+-rw-rw-rw-  1 root root 29289 Jan 18  2005 strings.php
+
+./blog/languages/dutch:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     5 May 16  2004 id.txt
+-rw-rw-rw-  1 root root 30400 Jan 18  2005 strings.php
+
+./blog/languages/dutch nieuw:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root    16 Jul 28  2004 id.txt
+-rwxrwxrwx  1 root root 30256 Jan 18  2005 strings.php
+
+./blog/languages/english:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root     7 Sep 20  2004 id.txt
+-rwxrwxrwx  1 root root 29207 Jan 18  2005 strings.php
+
+./blog/languages/french:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     8 Jun  1  2004 id.txt
+-rwxrwxrwx  1 root root 31162 Jan 18  2005 strings.php
+
+./blog/languages/german01:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root    36 Jan  2  2005 id.txt
+-rwxrwxrwx  1 root root 31114 Jan 18  2005 strings.php
+
+./blog/languages/italiano:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     8 Jun 23  2004 id.txt
+-rw-rw-rw-  1 root root 31590 Jan 18  2005 strings.php
+
+./blog/languages/japanese:
+total 40
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     8 Nov 18  2004 id.txt
+-rw-rw-rw-  1 root root 26623 Jan 18  2005 strings.php
+
+./blog/languages/malay:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     5 Jun  7  2004 id.txt
+-rw-rw-rw-  1 root root 30253 Jan 18  2005 strings.php
+
+./blog/languages/portuguese:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root     9 Jun  9  2004 id.txt
+-rw-rw-rw-  1 root root 29889 Jan 18  2005 strings.php
+
+./blog/languages/russian_koi8-ru:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root    35 May 13  2004 id.txt
+-rw-rw-rw-  1 root root 30279 Jan 18  2005 strings.php
+
+./blog/languages/russian_windows-1251:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root    32 May 13  2004 id.txt
+-rw-rw-rw-  1 root root 30245 Jan 18  2005 strings.php
+
+./blog/languages/spanish:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root     7 Nov  4  2004 id.txt
+-rw-rw-rw-  1 root root 31362 Jan 18  2005 strings.php
+
+./blog/languages/tamil:
+total 60
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rw-rw-rw-  1 root root    31 Jun 18  2004 id.txt
+-rw-rw-rw-  1 root root 46963 Jan 18  2005 strings.php
+
+./blog/languages/turkish:
+total 44
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root     6 Jul  9  2004 id.txt
+-rwxrwxrwx  1 root root 30085 Jan 18  2005 strings.php
+
+./blog/languages/zh_chinese:
+total 44
+drwxrwxrwx  2 root root  4096 Jan  4  2005 .
+drwxrwxrwx 19 root root  4096 Jan 18  2005 ..
+-rwxrwxrwx  1 root root    35 Jul 12  2004 id.txt
+-rwxrwxrwx  1 root root 31334 Jan 18  2005 strings.php
+
+./blog/scripts:
+total 264
+drwxrwxrwx  2 root root  4096 Jan 18  2005 .
+drwxrwxrwx 11 root root  4096 May  9  2011 ..
+-rwxrwxrwx  1 root root  1547 Jan  1  2005 sb_categories.php
+-rwxrwxrwx  1 root root  3705 Sep 20  2004 sb_color.php
+-rwxrwxrwx  1 root root 10371 Jan 18  2005 sb_comments.php
+-rwxrwxrwx  1 root root  4753 Jan  5  2005 sb_communicate.php
+-rwxrwxrwx  1 root root  9902 Nov 30  2004 sb_config.php
+-rwxrwxrwx  1 root root 18357 Nov 29  2004 sb_date.php
+-rwxrwxrwx  1 root root 22775 Jan 18  2005 sb_display.php
+-rwxrwxrwx  1 root root  4976 Dec 11  2004 sb_editor.php
+-rwxrwxrwx  1 root root  8943 Dec 28  2004 sb_entry.php
+-rwxrwxrwx  1 root root 13058 Jan  1  2005 sb_feed.php
+-rwxrwxrwx  1 root root  4844 Oct 16  2004 sb_fileio.php
+-rwxrwxrwx  1 root root 18527 Nov 29  2004 sb_formatting.php
+-rwxrwxrwx  1 root root  2107 Jan 18  2005 sb_functions.php
+-rwxrwxrwx  1 root root  2514 Sep 20  2004 sb_image.php
+-rwxrwxrwx  1 root root   811 Sep 20  2004 sb_javascript.js
+-rwxrwxrwx  1 root root   888 Sep 20  2004 sb_log.php
+-rwxrwxrwx  1 root root  4037 Jan 18  2005 sb_login.php
+-rwxrwxrwx  1 root root 23316 Jan 17  2005 sb_menu.php
+-rw-rw-rw-  1 root root  5646 Jan  2  2005 sb_search.php
+-rwxrwxrwx  1 root root  6825 Oct 18  2004 sb_static.php
+-rwxrwxrwx  1 root root   345 Sep 20  2004 sb_template.php
+-rwxrwxrwx  1 root root  9162 Jan 18  2005 sb_theme.php
+-rw-rw-rw-  1 root root 11312 Jan  5  2005 sb_trackback.php
+-rwxrwxrwx  1 root root 17682 Jan 18  2005 sb_utility.php
+
+./blog/themes:
+total 128
+drwxrwxrwx  4 root root   4096 Jan 18  2005 .
+drwxrwxrwx 11 root root   4096 May  9  2011 ..
+drwxrwxrwx  4 root root   4096 Jan 18  2005 default
+drwxrwxrwx  4 root root   4096 Jan 18  2005 modern
+-rwxr-xr-x  1 root root 110998 Jan 18  2005 new.tgz
+
+./blog/themes/default:
+total 48
+drwxrwxrwx 4 root root  4096 Jan 18  2005 .
+drwxrwxrwx 4 root root  4096 Jan 18  2005 ..
+drwxrwxrwx 2 root root  4096 Jan 18  2005 colors
+-rwxrwxrwx 1 root root     7 Sep 21  2004 id.txt
+drwxrwxrwx 3 root root  4096 Jan 18  2005 images
+-rwxrwxrwx 1 root root  2600 Jan 18  2005 style.css
+-rwxrwxrwx 1 root root 18916 Jan 18  2005 themes.php
+-rwxrwxrwx 1 root root  1013 Sep 21  2004 user_style.php
+
+./blog/themes/default/colors:
+total 28
+drwxrwxrwx 2 root root 4096 Jan 18  2005 .
+drwxrwxrwx 4 root root 4096 Jan 18  2005 ..
+-rw-rw-rw- 1 root root  353 Jan  2  2005 darkgrey.txt
+-rwxrwxrwx 1 root root  351 Jan 17  2005 default.txt
+-rw-r--r-- 1 root root  349 Jan  7  2005 ghost.txt
+-rw-r--r-- 1 root root  351 Jan 17  2005 neutral.txt
+-rwxrwxrwx 1 root root  353 Jan 17  2005 warmgrey.txt
+
+./blog/themes/default/images:
+total 12
+drwxrwxrwx 3 root root 4096 Jan 18  2005 .
+drwxrwxrwx 4 root root 4096 Jan 18  2005 ..
+drwxrwxrwx 2 root root 4096 Jan 18  2005 stars
+
+./blog/themes/default/images/stars:
+total 20
+drwxrwxrwx 2 root root 4096 Jan 18  2005 .
+drwxrwxrwx 3 root root 4096 Jan 18  2005 ..
+-rwxrwxrwx 1 root root  227 Sep 21  2004 full_star.png
+-rwxrwxrwx 1 root root  254 Sep 21  2004 half_star.png
+-rwxrwxrwx 1 root root  230 Sep 21  2004 no_star.png
+
+./blog/themes/modern:
+total 56
+drwxrwxrwx 4 root root  4096 Jan 18  2005 .
+drwxrwxrwx 4 root root  4096 Jan 18  2005 ..
+drwxrwxrwx 2 root root  4096 Jan 18  2005 colors
+-rwxrwxrwx 1 root root     6 Nov  4  2004 id.txt
+drwxrwxrwx 3 root root  4096 Nov  8  2004 images
+-rwxrwxrwx 1 root root  3423 Nov 29  2004 style.css
+-rwxrwxrwx 1 root root 25953 Jan 18  2005 themes.php
+-rwxrwxrwx 1 root root  2164 Nov  4  2004 user_style.php
+
+./blog/themes/modern/colors:
+total 28
+drwxrwxrwx 2 root root 4096 Jan 18  2005 .
+drwxrwxrwx 4 root root 4096 Jan 18  2005 ..
+-rwxrwxrwx 1 root root  626 Jan 17  2005 classic.txt
+-rw-rw-rw- 1 root root  628 Jan  2  2005 darkgrey.txt
+-rw-r--r-- 1 root root  624 Jan  7  2005 ghost.txt
+-rw-rw-rw- 1 root root  626 Jan  2  2005 neutral.txt
+-rwxrwxrwx 1 root root  628 Jan 17  2005 warmgrey.txt
+
+./blog/themes/modern/images:
+total 40
+drwxrwxrwx 3 root root 4096 Nov  8  2004 .
+drwxrwxrwx 4 root root 4096 Jan 18  2005 ..
+-rwxrwxrwx 1 root root  669 Nov  4  2004 box_add.png
+-rwxrwxrwx 1 root root  602 Nov  4  2004 box_cancel.png
+-rwxrwxrwx 1 root root  704 Nov  4  2004 box_delete.png
+-rwxrwxrwx 1 root root  751 Nov  4  2004 box_down.png
+-rwxrwxrwx 1 root root  720 Nov  4  2004 box_left.png
+-rwxrwxrwx 1 root root  708 Nov  4  2004 box_right.png
+-rwxrwxrwx 1 root root  711 Nov  4  2004 box_up.png
+drwxrwxrwx 2 root root 4096 Nov  8  2004 stars
+
+./blog/themes/modern/images/stars:
+total 20
+drwxrwxrwx 2 root root 4096 Nov  8  2004 .
+drwxrwxrwx 3 root root 4096 Nov  8  2004 ..
+-rwxrwxrwx 1 root root  227 Nov  4  2004 full_star.png
+-rwxrwxrwx 1 root root  254 Nov  4  2004 half_star.png
+-rwxrwxrwx 1 root root  230 Nov  4  2004 no_star.png
+
+./includes:
+total 24
+drwxr-xr-x 2 root root 4096 May  7  2011 .
+drwxr-xr-x 4 root root 4096 May 15 05:18 ..
+-rw-r--r-- 1 root root 1985 May  7  2011 config.inc.php
+-rw-r--r-- 1 root root  863 May  7  2011 footer.html
+-rw-r--r-- 1 root root  746 May  7  2011 header.html
+-rw-r--r-- 1 root root 2258 Mar 24  2008 layout.css
+</pre>

