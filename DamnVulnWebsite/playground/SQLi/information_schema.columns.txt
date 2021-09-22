@@ -1,0 +1,1580 @@
+table name: ALL_PLUGINS
+column_name: PLUGIN_NAME
+table name: ALL_PLUGINS
+column_name: PLUGIN_VERSION
+table name: ALL_PLUGINS
+column_name: PLUGIN_STATUS
+table name: ALL_PLUGINS
+column_name: PLUGIN_TYPE
+table name: ALL_PLUGINS
+column_name: PLUGIN_TYPE_VERSION
+table name: ALL_PLUGINS
+column_name: PLUGIN_LIBRARY
+table name: ALL_PLUGINS
+column_name: PLUGIN_LIBRARY_VERSION
+table name: ALL_PLUGINS
+column_name: PLUGIN_AUTHOR
+table name: ALL_PLUGINS
+column_name: PLUGIN_DESCRIPTION
+table name: ALL_PLUGINS
+column_name: PLUGIN_LICENSE
+table name: ALL_PLUGINS
+column_name: LOAD_OPTION
+table name: ALL_PLUGINS
+column_name: PLUGIN_MATURITY
+table name: ALL_PLUGINS
+column_name: PLUGIN_AUTH_VERSION
+table name: APPLICABLE_ROLES
+column_name: GRANTEE
+table name: APPLICABLE_ROLES
+column_name: ROLE_NAME
+table name: APPLICABLE_ROLES
+column_name: IS_GRANTABLE
+table name: APPLICABLE_ROLES
+column_name: IS_DEFAULT
+table name: CHARACTER_SETS
+column_name: CHARACTER_SET_NAME
+table name: CHARACTER_SETS
+column_name: DEFAULT_COLLATE_NAME
+table name: CHARACTER_SETS
+column_name: DESCRIPTION
+table name: CHARACTER_SETS
+column_name: MAXLEN
+table name: CHECK_CONSTRAINTS
+column_name: CONSTRAINT_CATALOG
+table name: CHECK_CONSTRAINTS
+column_name: CONSTRAINT_SCHEMA
+table name: CHECK_CONSTRAINTS
+column_name: TABLE_NAME
+table name: CHECK_CONSTRAINTS
+column_name: CONSTRAINT_NAME
+table name: CHECK_CONSTRAINTS
+column_name: CHECK_CLAUSE
+table name: COLLATIONS
+column_name: COLLATION_NAME
+table name: COLLATIONS
+column_name: CHARACTER_SET_NAME
+table name: COLLATIONS
+column_name: ID
+table name: COLLATIONS
+column_name: IS_DEFAULT
+table name: COLLATIONS
+column_name: IS_COMPILED
+table name: COLLATIONS
+column_name: SORTLEN
+table name: COLLATION_CHARACTER_SET_APPLICABILITY
+column_name: COLLATION_NAME
+table name: COLLATION_CHARACTER_SET_APPLICABILITY
+column_name: CHARACTER_SET_NAME
+table name: COLUMNS
+column_name: TABLE_CATALOG
+table name: COLUMNS
+column_name: TABLE_SCHEMA
+table name: COLUMNS
+column_name: TABLE_NAME
+table name: COLUMNS
+column_name: COLUMN_NAME
+table name: COLUMNS
+column_name: ORDINAL_POSITION
+table name: COLUMNS
+column_name: COLUMN_DEFAULT
+table name: COLUMNS
+column_name: IS_NULLABLE
+table name: COLUMNS
+column_name: DATA_TYPE
+table name: COLUMNS
+column_name: CHARACTER_MAXIMUM_LENGTH
+table name: COLUMNS
+column_name: CHARACTER_OCTET_LENGTH
+table name: COLUMNS
+column_name: NUMERIC_PRECISION
+table name: COLUMNS
+column_name: NUMERIC_SCALE
+table name: COLUMNS
+column_name: DATETIME_PRECISION
+table name: COLUMNS
+column_name: CHARACTER_SET_NAME
+table name: COLUMNS
+column_name: COLLATION_NAME
+table name: COLUMNS
+column_name: COLUMN_TYPE
+table name: COLUMNS
+column_name: COLUMN_KEY
+table name: COLUMNS
+column_name: EXTRA
+table name: COLUMNS
+column_name: PRIVILEGES
+table name: COLUMNS
+column_name: COLUMN_COMMENT
+table name: COLUMNS
+column_name: IS_GENERATED
+table name: COLUMNS
+column_name: GENERATION_EXPRESSION
+table name: COLUMN_PRIVILEGES
+column_name: GRANTEE
+table name: COLUMN_PRIVILEGES
+column_name: TABLE_CATALOG
+table name: COLUMN_PRIVILEGES
+column_name: TABLE_SCHEMA
+table name: COLUMN_PRIVILEGES
+column_name: TABLE_NAME
+table name: COLUMN_PRIVILEGES
+column_name: COLUMN_NAME
+table name: COLUMN_PRIVILEGES
+column_name: PRIVILEGE_TYPE
+table name: COLUMN_PRIVILEGES
+column_name: IS_GRANTABLE
+table name: ENABLED_ROLES
+column_name: ROLE_NAME
+table name: ENGINES
+column_name: ENGINE
+table name: ENGINES
+column_name: SUPPORT
+table name: ENGINES
+column_name: COMMENT
+table name: ENGINES
+column_name: TRANSACTIONS
+table name: ENGINES
+column_name: XA
+table name: ENGINES
+column_name: SAVEPOINTS
+table name: EVENTS
+column_name: EVENT_CATALOG
+table name: EVENTS
+column_name: EVENT_SCHEMA
+table name: EVENTS
+column_name: EVENT_NAME
+table name: EVENTS
+column_name: DEFINER
+table name: EVENTS
+column_name: TIME_ZONE
+table name: EVENTS
+column_name: EVENT_BODY
+table name: EVENTS
+column_name: EVENT_DEFINITION
+table name: EVENTS
+column_name: EVENT_TYPE
+table name: EVENTS
+column_name: EXECUTE_AT
+table name: EVENTS
+column_name: INTERVAL_VALUE
+table name: EVENTS
+column_name: INTERVAL_FIELD
+table name: EVENTS
+column_name: SQL_MODE
+table name: EVENTS
+column_name: STARTS
+table name: EVENTS
+column_name: ENDS
+table name: EVENTS
+column_name: STATUS
+table name: EVENTS
+column_name: ON_COMPLETION
+table name: EVENTS
+column_name: CREATED
+table name: EVENTS
+column_name: LAST_ALTERED
+table name: EVENTS
+column_name: LAST_EXECUTED
+table name: EVENTS
+column_name: EVENT_COMMENT
+table name: EVENTS
+column_name: ORIGINATOR
+table name: EVENTS
+column_name: CHARACTER_SET_CLIENT
+table name: EVENTS
+column_name: COLLATION_CONNECTION
+table name: EVENTS
+column_name: DATABASE_COLLATION
+table name: FILES
+column_name: FILE_ID
+table name: FILES
+column_name: FILE_NAME
+table name: FILES
+column_name: FILE_TYPE
+table name: FILES
+column_name: TABLESPACE_NAME
+table name: FILES
+column_name: TABLE_CATALOG
+table name: FILES
+column_name: TABLE_SCHEMA
+table name: FILES
+column_name: TABLE_NAME
+table name: FILES
+column_name: LOGFILE_GROUP_NAME
+table name: FILES
+column_name: LOGFILE_GROUP_NUMBER
+table name: FILES
+column_name: ENGINE
+table name: FILES
+column_name: FULLTEXT_KEYS
+table name: FILES
+column_name: DELETED_ROWS
+table name: FILES
+column_name: UPDATE_COUNT
+table name: FILES
+column_name: FREE_EXTENTS
+table name: FILES
+column_name: TOTAL_EXTENTS
+table name: FILES
+column_name: EXTENT_SIZE
+table name: FILES
+column_name: INITIAL_SIZE
+table name: FILES
+column_name: MAXIMUM_SIZE
+table name: FILES
+column_name: AUTOEXTEND_SIZE
+table name: FILES
+column_name: CREATION_TIME
+table name: FILES
+column_name: LAST_UPDATE_TIME
+table name: FILES
+column_name: LAST_ACCESS_TIME
+table name: FILES
+column_name: RECOVER_TIME
+table name: FILES
+column_name: TRANSACTION_COUNTER
+table name: FILES
+column_name: VERSION
+table name: FILES
+column_name: ROW_FORMAT
+table name: FILES
+column_name: TABLE_ROWS
+table name: FILES
+column_name: AVG_ROW_LENGTH
+table name: FILES
+column_name: DATA_LENGTH
+table name: FILES
+column_name: MAX_DATA_LENGTH
+table name: FILES
+column_name: INDEX_LENGTH
+table name: FILES
+column_name: DATA_FREE
+table name: FILES
+column_name: CREATE_TIME
+table name: FILES
+column_name: UPDATE_TIME
+table name: FILES
+column_name: CHECK_TIME
+table name: FILES
+column_name: CHECKSUM
+table name: FILES
+column_name: STATUS
+table name: FILES
+column_name: EXTRA
+table name: GLOBAL_STATUS
+column_name: VARIABLE_NAME
+table name: GLOBAL_STATUS
+column_name: VARIABLE_VALUE
+table name: GLOBAL_VARIABLES
+column_name: VARIABLE_NAME
+table name: GLOBAL_VARIABLES
+column_name: VARIABLE_VALUE
+table name: KEY_CACHES
+column_name: KEY_CACHE_NAME
+table name: KEY_CACHES
+column_name: SEGMENTS
+table name: KEY_CACHES
+column_name: SEGMENT_NUMBER
+table name: KEY_CACHES
+column_name: FULL_SIZE
+table name: KEY_CACHES
+column_name: BLOCK_SIZE
+table name: KEY_CACHES
+column_name: USED_BLOCKS
+table name: KEY_CACHES
+column_name: UNUSED_BLOCKS
+table name: KEY_CACHES
+column_name: DIRTY_BLOCKS
+table name: KEY_CACHES
+column_name: READ_REQUESTS
+table name: KEY_CACHES
+column_name: READS
+table name: KEY_CACHES
+column_name: WRITE_REQUESTS
+table name: KEY_CACHES
+column_name: WRITES
+table name: KEY_COLUMN_USAGE
+column_name: CONSTRAINT_CATALOG
+table name: KEY_COLUMN_USAGE
+column_name: CONSTRAINT_SCHEMA
+table name: KEY_COLUMN_USAGE
+column_name: CONSTRAINT_NAME
+table name: KEY_COLUMN_USAGE
+column_name: TABLE_CATALOG
+table name: KEY_COLUMN_USAGE
+column_name: TABLE_SCHEMA
+table name: KEY_COLUMN_USAGE
+column_name: TABLE_NAME
+table name: KEY_COLUMN_USAGE
+column_name: COLUMN_NAME
+table name: KEY_COLUMN_USAGE
+column_name: ORDINAL_POSITION
+table name: KEY_COLUMN_USAGE
+column_name: POSITION_IN_UNIQUE_CONSTRAINT
+table name: KEY_COLUMN_USAGE
+column_name: REFERENCED_TABLE_SCHEMA
+table name: KEY_COLUMN_USAGE
+column_name: REFERENCED_TABLE_NAME
+table name: KEY_COLUMN_USAGE
+column_name: REFERENCED_COLUMN_NAME
+table name: PARAMETERS
+column_name: SPECIFIC_CATALOG
+table name: PARAMETERS
+column_name: SPECIFIC_SCHEMA
+table name: PARAMETERS
+column_name: SPECIFIC_NAME
+table name: PARAMETERS
+column_name: ORDINAL_POSITION
+table name: PARAMETERS
+column_name: PARAMETER_MODE
+table name: PARAMETERS
+column_name: PARAMETER_NAME
+table name: PARAMETERS
+column_name: DATA_TYPE
+table name: PARAMETERS
+column_name: CHARACTER_MAXIMUM_LENGTH
+table name: PARAMETERS
+column_name: CHARACTER_OCTET_LENGTH
+table name: PARAMETERS
+column_name: NUMERIC_PRECISION
+table name: PARAMETERS
+column_name: NUMERIC_SCALE
+table name: PARAMETERS
+column_name: DATETIME_PRECISION
+table name: PARAMETERS
+column_name: CHARACTER_SET_NAME
+table name: PARAMETERS
+column_name: COLLATION_NAME
+table name: PARAMETERS
+column_name: DTD_IDENTIFIER
+table name: PARAMETERS
+column_name: ROUTINE_TYPE
+table name: PARTITIONS
+column_name: TABLE_CATALOG
+table name: PARTITIONS
+column_name: TABLE_SCHEMA
+table name: PARTITIONS
+column_name: TABLE_NAME
+table name: PARTITIONS
+column_name: PARTITION_NAME
+table name: PARTITIONS
+column_name: SUBPARTITION_NAME
+table name: PARTITIONS
+column_name: PARTITION_ORDINAL_POSITION
+table name: PARTITIONS
+column_name: SUBPARTITION_ORDINAL_POSITION
+table name: PARTITIONS
+column_name: PARTITION_METHOD
+table name: PARTITIONS
+column_name: SUBPARTITION_METHOD
+table name: PARTITIONS
+column_name: PARTITION_EXPRESSION
+table name: PARTITIONS
+column_name: SUBPARTITION_EXPRESSION
+table name: PARTITIONS
+column_name: PARTITION_DESCRIPTION
+table name: PARTITIONS
+column_name: TABLE_ROWS
+table name: PARTITIONS
+column_name: AVG_ROW_LENGTH
+table name: PARTITIONS
+column_name: DATA_LENGTH
+table name: PARTITIONS
+column_name: MAX_DATA_LENGTH
+table name: PARTITIONS
+column_name: INDEX_LENGTH
+table name: PARTITIONS
+column_name: DATA_FREE
+table name: PARTITIONS
+column_name: CREATE_TIME
+table name: PARTITIONS
+column_name: UPDATE_TIME
+table name: PARTITIONS
+column_name: CHECK_TIME
+table name: PARTITIONS
+column_name: CHECKSUM
+table name: PARTITIONS
+column_name: PARTITION_COMMENT
+table name: PARTITIONS
+column_name: NODEGROUP
+table name: PARTITIONS
+column_name: TABLESPACE_NAME
+table name: PLUGINS
+column_name: PLUGIN_NAME
+table name: PLUGINS
+column_name: PLUGIN_VERSION
+table name: PLUGINS
+column_name: PLUGIN_STATUS
+table name: PLUGINS
+column_name: PLUGIN_TYPE
+table name: PLUGINS
+column_name: PLUGIN_TYPE_VERSION
+table name: PLUGINS
+column_name: PLUGIN_LIBRARY
+table name: PLUGINS
+column_name: PLUGIN_LIBRARY_VERSION
+table name: PLUGINS
+column_name: PLUGIN_AUTHOR
+table name: PLUGINS
+column_name: PLUGIN_DESCRIPTION
+table name: PLUGINS
+column_name: PLUGIN_LICENSE
+table name: PLUGINS
+column_name: LOAD_OPTION
+table name: PLUGINS
+column_name: PLUGIN_MATURITY
+table name: PLUGINS
+column_name: PLUGIN_AUTH_VERSION
+table name: PROCESSLIST
+column_name: ID
+table name: PROCESSLIST
+column_name: USER
+table name: PROCESSLIST
+column_name: HOST
+table name: PROCESSLIST
+column_name: DB
+table name: PROCESSLIST
+column_name: COMMAND
+table name: PROCESSLIST
+column_name: TIME
+table name: PROCESSLIST
+column_name: STATE
+table name: PROCESSLIST
+column_name: INFO
+table name: PROCESSLIST
+column_name: TIME_MS
+table name: PROCESSLIST
+column_name: STAGE
+table name: PROCESSLIST
+column_name: MAX_STAGE
+table name: PROCESSLIST
+column_name: PROGRESS
+table name: PROCESSLIST
+column_name: MEMORY_USED
+table name: PROCESSLIST
+column_name: MAX_MEMORY_USED
+table name: PROCESSLIST
+column_name: EXAMINED_ROWS
+table name: PROCESSLIST
+column_name: QUERY_ID
+table name: PROCESSLIST
+column_name: INFO_BINARY
+table name: PROCESSLIST
+column_name: TID
+table name: PROFILING
+column_name: QUERY_ID
+table name: PROFILING
+column_name: SEQ
+table name: PROFILING
+column_name: STATE
+table name: PROFILING
+column_name: DURATION
+table name: PROFILING
+column_name: CPU_USER
+table name: PROFILING
+column_name: CPU_SYSTEM
+table name: PROFILING
+column_name: CONTEXT_VOLUNTARY
+table name: PROFILING
+column_name: CONTEXT_INVOLUNTARY
+table name: PROFILING
+column_name: BLOCK_OPS_IN
+table name: PROFILING
+column_name: BLOCK_OPS_OUT
+table name: PROFILING
+column_name: MESSAGES_SENT
+table name: PROFILING
+column_name: MESSAGES_RECEIVED
+table name: PROFILING
+column_name: PAGE_FAULTS_MAJOR
+table name: PROFILING
+column_name: PAGE_FAULTS_MINOR
+table name: PROFILING
+column_name: SWAPS
+table name: PROFILING
+column_name: SOURCE_FUNCTION
+table name: PROFILING
+column_name: SOURCE_FILE
+table name: PROFILING
+column_name: SOURCE_LINE
+table name: REFERENTIAL_CONSTRAINTS
+column_name: CONSTRAINT_CATALOG
+table name: REFERENTIAL_CONSTRAINTS
+column_name: CONSTRAINT_SCHEMA
+table name: REFERENTIAL_CONSTRAINTS
+column_name: CONSTRAINT_NAME
+table name: REFERENTIAL_CONSTRAINTS
+column_name: UNIQUE_CONSTRAINT_CATALOG
+table name: REFERENTIAL_CONSTRAINTS
+column_name: UNIQUE_CONSTRAINT_SCHEMA
+table name: REFERENTIAL_CONSTRAINTS
+column_name: UNIQUE_CONSTRAINT_NAME
+table name: REFERENTIAL_CONSTRAINTS
+column_name: MATCH_OPTION
+table name: REFERENTIAL_CONSTRAINTS
+column_name: UPDATE_RULE
+table name: REFERENTIAL_CONSTRAINTS
+column_name: DELETE_RULE
+table name: REFERENTIAL_CONSTRAINTS
+column_name: TABLE_NAME
+table name: REFERENTIAL_CONSTRAINTS
+column_name: REFERENCED_TABLE_NAME
+table name: ROUTINES
+column_name: SPECIFIC_NAME
+table name: ROUTINES
+column_name: ROUTINE_CATALOG
+table name: ROUTINES
+column_name: ROUTINE_SCHEMA
+table name: ROUTINES
+column_name: ROUTINE_NAME
+table name: ROUTINES
+column_name: ROUTINE_TYPE
+table name: ROUTINES
+column_name: DATA_TYPE
+table name: ROUTINES
+column_name: CHARACTER_MAXIMUM_LENGTH
+table name: ROUTINES
+column_name: CHARACTER_OCTET_LENGTH
+table name: ROUTINES
+column_name: NUMERIC_PRECISION
+table name: ROUTINES
+column_name: NUMERIC_SCALE
+table name: ROUTINES
+column_name: DATETIME_PRECISION
+table name: ROUTINES
+column_name: CHARACTER_SET_NAME
+table name: ROUTINES
+column_name: COLLATION_NAME
+table name: ROUTINES
+column_name: DTD_IDENTIFIER
+table name: ROUTINES
+column_name: ROUTINE_BODY
+table name: ROUTINES
+column_name: ROUTINE_DEFINITION
+table name: ROUTINES
+column_name: EXTERNAL_NAME
+table name: ROUTINES
+column_name: EXTERNAL_LANGUAGE
+table name: ROUTINES
+column_name: PARAMETER_STYLE
+table name: ROUTINES
+column_name: IS_DETERMINISTIC
+table name: ROUTINES
+column_name: SQL_DATA_ACCESS
+table name: ROUTINES
+column_name: SQL_PATH
+table name: ROUTINES
+column_name: SECURITY_TYPE
+table name: ROUTINES
+column_name: CREATED
+table name: ROUTINES
+column_name: LAST_ALTERED
+table name: ROUTINES
+column_name: SQL_MODE
+table name: ROUTINES
+column_name: ROUTINE_COMMENT
+table name: ROUTINES
+column_name: DEFINER
+table name: ROUTINES
+column_name: CHARACTER_SET_CLIENT
+table name: ROUTINES
+column_name: COLLATION_CONNECTION
+table name: ROUTINES
+column_name: DATABASE_COLLATION
+table name: SCHEMATA
+column_name: CATALOG_NAME
+table name: SCHEMATA
+column_name: SCHEMA_NAME
+table name: SCHEMATA
+column_name: DEFAULT_CHARACTER_SET_NAME
+table name: SCHEMATA
+column_name: DEFAULT_COLLATION_NAME
+table name: SCHEMATA
+column_name: SQL_PATH
+table name: SCHEMA_PRIVILEGES
+column_name: GRANTEE
+table name: SCHEMA_PRIVILEGES
+column_name: TABLE_CATALOG
+table name: SCHEMA_PRIVILEGES
+column_name: TABLE_SCHEMA
+table name: SCHEMA_PRIVILEGES
+column_name: PRIVILEGE_TYPE
+table name: SCHEMA_PRIVILEGES
+column_name: IS_GRANTABLE
+table name: SESSION_STATUS
+column_name: VARIABLE_NAME
+table name: SESSION_STATUS
+column_name: VARIABLE_VALUE
+table name: SESSION_VARIABLES
+column_name: VARIABLE_NAME
+table name: SESSION_VARIABLES
+column_name: VARIABLE_VALUE
+table name: STATISTICS
+column_name: TABLE_CATALOG
+table name: STATISTICS
+column_name: TABLE_SCHEMA
+table name: STATISTICS
+column_name: TABLE_NAME
+table name: STATISTICS
+column_name: NON_UNIQUE
+table name: STATISTICS
+column_name: INDEX_SCHEMA
+table name: STATISTICS
+column_name: INDEX_NAME
+table name: STATISTICS
+column_name: SEQ_IN_INDEX
+table name: STATISTICS
+column_name: COLUMN_NAME
+table name: STATISTICS
+column_name: COLLATION
+table name: STATISTICS
+column_name: CARDINALITY
+table name: STATISTICS
+column_name: SUB_PART
+table name: STATISTICS
+column_name: PACKED
+table name: STATISTICS
+column_name: NULLABLE
+table name: STATISTICS
+column_name: INDEX_TYPE
+table name: STATISTICS
+column_name: COMMENT
+table name: STATISTICS
+column_name: INDEX_COMMENT
+table name: SYSTEM_VARIABLES
+column_name: VARIABLE_NAME
+table name: SYSTEM_VARIABLES
+column_name: SESSION_VALUE
+table name: SYSTEM_VARIABLES
+column_name: GLOBAL_VALUE
+table name: SYSTEM_VARIABLES
+column_name: GLOBAL_VALUE_ORIGIN
+table name: SYSTEM_VARIABLES
+column_name: DEFAULT_VALUE
+table name: SYSTEM_VARIABLES
+column_name: VARIABLE_SCOPE
+table name: SYSTEM_VARIABLES
+column_name: VARIABLE_TYPE
+table name: SYSTEM_VARIABLES
+column_name: VARIABLE_COMMENT
+table name: SYSTEM_VARIABLES
+column_name: NUMERIC_MIN_VALUE
+table name: SYSTEM_VARIABLES
+column_name: NUMERIC_MAX_VALUE
+table name: SYSTEM_VARIABLES
+column_name: NUMERIC_BLOCK_SIZE
+table name: SYSTEM_VARIABLES
+column_name: ENUM_VALUE_LIST
+table name: SYSTEM_VARIABLES
+column_name: READ_ONLY
+table name: SYSTEM_VARIABLES
+column_name: COMMAND_LINE_ARGUMENT
+table name: TABLES
+column_name: TABLE_CATALOG
+table name: TABLES
+column_name: TABLE_SCHEMA
+table name: TABLES
+column_name: TABLE_NAME
+table name: TABLES
+column_name: TABLE_TYPE
+table name: TABLES
+column_name: ENGINE
+table name: TABLES
+column_name: VERSION
+table name: TABLES
+column_name: ROW_FORMAT
+table name: TABLES
+column_name: TABLE_ROWS
+table name: TABLES
+column_name: AVG_ROW_LENGTH
+table name: TABLES
+column_name: DATA_LENGTH
+table name: TABLES
+column_name: MAX_DATA_LENGTH
+table name: TABLES
+column_name: INDEX_LENGTH
+table name: TABLES
+column_name: DATA_FREE
+table name: TABLES
+column_name: AUTO_INCREMENT
+table name: TABLES
+column_name: CREATE_TIME
+table name: TABLES
+column_name: UPDATE_TIME
+table name: TABLES
+column_name: CHECK_TIME
+table name: TABLES
+column_name: TABLE_COLLATION
+table name: TABLES
+column_name: CHECKSUM
+table name: TABLES
+column_name: CREATE_OPTIONS
+table name: TABLES
+column_name: TABLE_COMMENT
+table name: TABLES
+column_name: MAX_INDEX_LENGTH
+table name: TABLES
+column_name: TEMPORARY
+table name: TABLESPACES
+column_name: TABLESPACE_NAME
+table name: TABLESPACES
+column_name: ENGINE
+table name: TABLESPACES
+column_name: TABLESPACE_TYPE
+table name: TABLESPACES
+column_name: LOGFILE_GROUP_NAME
+table name: TABLESPACES
+column_name: EXTENT_SIZE
+table name: TABLESPACES
+column_name: AUTOEXTEND_SIZE
+table name: TABLESPACES
+column_name: MAXIMUM_SIZE
+table name: TABLESPACES
+column_name: NODEGROUP_ID
+table name: TABLESPACES
+column_name: TABLESPACE_COMMENT
+table name: TABLE_CONSTRAINTS
+column_name: CONSTRAINT_CATALOG
+table name: TABLE_CONSTRAINTS
+column_name: CONSTRAINT_SCHEMA
+table name: TABLE_CONSTRAINTS
+column_name: CONSTRAINT_NAME
+table name: TABLE_CONSTRAINTS
+column_name: TABLE_SCHEMA
+table name: TABLE_CONSTRAINTS
+column_name: TABLE_NAME
+table name: TABLE_CONSTRAINTS
+column_name: CONSTRAINT_TYPE
+table name: TABLE_PRIVILEGES
+column_name: GRANTEE
+table name: TABLE_PRIVILEGES
+column_name: TABLE_CATALOG
+table name: TABLE_PRIVILEGES
+column_name: TABLE_SCHEMA
+table name: TABLE_PRIVILEGES
+column_name: TABLE_NAME
+table name: TABLE_PRIVILEGES
+column_name: PRIVILEGE_TYPE
+table name: TABLE_PRIVILEGES
+column_name: IS_GRANTABLE
+table name: TRIGGERS
+column_name: TRIGGER_CATALOG
+table name: TRIGGERS
+column_name: TRIGGER_SCHEMA
+table name: TRIGGERS
+column_name: TRIGGER_NAME
+table name: TRIGGERS
+column_name: EVENT_MANIPULATION
+table name: TRIGGERS
+column_name: EVENT_OBJECT_CATALOG
+table name: TRIGGERS
+column_name: EVENT_OBJECT_SCHEMA
+table name: TRIGGERS
+column_name: EVENT_OBJECT_TABLE
+table name: TRIGGERS
+column_name: ACTION_ORDER
+table name: TRIGGERS
+column_name: ACTION_CONDITION
+table name: TRIGGERS
+column_name: ACTION_STATEMENT
+table name: TRIGGERS
+column_name: ACTION_ORIENTATION
+table name: TRIGGERS
+column_name: ACTION_TIMING
+table name: TRIGGERS
+column_name: ACTION_REFERENCE_OLD_TABLE
+table name: TRIGGERS
+column_name: ACTION_REFERENCE_NEW_TABLE
+table name: TRIGGERS
+column_name: ACTION_REFERENCE_OLD_ROW
+table name: TRIGGERS
+column_name: ACTION_REFERENCE_NEW_ROW
+table name: TRIGGERS
+column_name: CREATED
+table name: TRIGGERS
+column_name: SQL_MODE
+table name: TRIGGERS
+column_name: DEFINER
+table name: TRIGGERS
+column_name: CHARACTER_SET_CLIENT
+table name: TRIGGERS
+column_name: COLLATION_CONNECTION
+table name: TRIGGERS
+column_name: DATABASE_COLLATION
+table name: USER_PRIVILEGES
+column_name: GRANTEE
+table name: USER_PRIVILEGES
+column_name: TABLE_CATALOG
+table name: USER_PRIVILEGES
+column_name: PRIVILEGE_TYPE
+table name: USER_PRIVILEGES
+column_name: IS_GRANTABLE
+table name: VIEWS
+column_name: TABLE_CATALOG
+table name: VIEWS
+column_name: TABLE_SCHEMA
+table name: VIEWS
+column_name: TABLE_NAME
+table name: VIEWS
+column_name: VIEW_DEFINITION
+table name: VIEWS
+column_name: CHECK_OPTION
+table name: VIEWS
+column_name: IS_UPDATABLE
+table name: VIEWS
+column_name: DEFINER
+table name: VIEWS
+column_name: SECURITY_TYPE
+table name: VIEWS
+column_name: CHARACTER_SET_CLIENT
+table name: VIEWS
+column_name: COLLATION_CONNECTION
+table name: VIEWS
+column_name: ALGORITHM
+table name: GEOMETRY_COLUMNS
+column_name: F_TABLE_CATALOG
+table name: GEOMETRY_COLUMNS
+column_name: F_TABLE_SCHEMA
+table name: GEOMETRY_COLUMNS
+column_name: F_TABLE_NAME
+table name: GEOMETRY_COLUMNS
+column_name: F_GEOMETRY_COLUMN
+table name: GEOMETRY_COLUMNS
+column_name: G_TABLE_CATALOG
+table name: GEOMETRY_COLUMNS
+column_name: G_TABLE_SCHEMA
+table name: GEOMETRY_COLUMNS
+column_name: G_TABLE_NAME
+table name: GEOMETRY_COLUMNS
+column_name: G_GEOMETRY_COLUMN
+table name: GEOMETRY_COLUMNS
+column_name: STORAGE_TYPE
+table name: GEOMETRY_COLUMNS
+column_name: GEOMETRY_TYPE
+table name: GEOMETRY_COLUMNS
+column_name: COORD_DIMENSION
+table name: GEOMETRY_COLUMNS
+column_name: MAX_PPR
+table name: GEOMETRY_COLUMNS
+column_name: SRID
+table name: SPATIAL_REF_SYS
+column_name: SRID
+table name: SPATIAL_REF_SYS
+column_name: AUTH_NAME
+table name: SPATIAL_REF_SYS
+column_name: AUTH_SRID
+table name: SPATIAL_REF_SYS
+column_name: SRTEXT
+table name: CLIENT_STATISTICS
+column_name: CLIENT
+table name: CLIENT_STATISTICS
+column_name: TOTAL_CONNECTIONS
+table name: CLIENT_STATISTICS
+column_name: CONCURRENT_CONNECTIONS
+table name: CLIENT_STATISTICS
+column_name: CONNECTED_TIME
+table name: CLIENT_STATISTICS
+column_name: BUSY_TIME
+table name: CLIENT_STATISTICS
+column_name: CPU_TIME
+table name: CLIENT_STATISTICS
+column_name: BYTES_RECEIVED
+table name: CLIENT_STATISTICS
+column_name: BYTES_SENT
+table name: CLIENT_STATISTICS
+column_name: BINLOG_BYTES_WRITTEN
+table name: CLIENT_STATISTICS
+column_name: ROWS_READ
+table name: CLIENT_STATISTICS
+column_name: ROWS_SENT
+table name: CLIENT_STATISTICS
+column_name: ROWS_DELETED
+table name: CLIENT_STATISTICS
+column_name: ROWS_INSERTED
+table name: CLIENT_STATISTICS
+column_name: ROWS_UPDATED
+table name: CLIENT_STATISTICS
+column_name: SELECT_COMMANDS
+table name: CLIENT_STATISTICS
+column_name: UPDATE_COMMANDS
+table name: CLIENT_STATISTICS
+column_name: OTHER_COMMANDS
+table name: CLIENT_STATISTICS
+column_name: COMMIT_TRANSACTIONS
+table name: CLIENT_STATISTICS
+column_name: ROLLBACK_TRANSACTIONS
+table name: CLIENT_STATISTICS
+column_name: DENIED_CONNECTIONS
+table name: CLIENT_STATISTICS
+column_name: LOST_CONNECTIONS
+table name: CLIENT_STATISTICS
+column_name: ACCESS_DENIED
+table name: CLIENT_STATISTICS
+column_name: EMPTY_QUERIES
+table name: CLIENT_STATISTICS
+column_name: TOTAL_SSL_CONNECTIONS
+table name: CLIENT_STATISTICS
+column_name: MAX_STATEMENT_TIME_EXCEEDED
+table name: INDEX_STATISTICS
+column_name: TABLE_SCHEMA
+table name: INDEX_STATISTICS
+column_name: TABLE_NAME
+table name: INDEX_STATISTICS
+column_name: INDEX_NAME
+table name: INDEX_STATISTICS
+column_name: ROWS_READ
+table name: INNODB_SYS_DATAFILES
+column_name: SPACE
+table name: INNODB_SYS_DATAFILES
+column_name: PATH
+table name: USER_STATISTICS
+column_name: USER
+table name: USER_STATISTICS
+column_name: TOTAL_CONNECTIONS
+table name: USER_STATISTICS
+column_name: CONCURRENT_CONNECTIONS
+table name: USER_STATISTICS
+column_name: CONNECTED_TIME
+table name: USER_STATISTICS
+column_name: BUSY_TIME
+table name: USER_STATISTICS
+column_name: CPU_TIME
+table name: USER_STATISTICS
+column_name: BYTES_RECEIVED
+table name: USER_STATISTICS
+column_name: BYTES_SENT
+table name: USER_STATISTICS
+column_name: BINLOG_BYTES_WRITTEN
+table name: USER_STATISTICS
+column_name: ROWS_READ
+table name: USER_STATISTICS
+column_name: ROWS_SENT
+table name: USER_STATISTICS
+column_name: ROWS_DELETED
+table name: USER_STATISTICS
+column_name: ROWS_INSERTED
+table name: USER_STATISTICS
+column_name: ROWS_UPDATED
+table name: USER_STATISTICS
+column_name: SELECT_COMMANDS
+table name: USER_STATISTICS
+column_name: UPDATE_COMMANDS
+table name: USER_STATISTICS
+column_name: OTHER_COMMANDS
+table name: USER_STATISTICS
+column_name: COMMIT_TRANSACTIONS
+table name: USER_STATISTICS
+column_name: ROLLBACK_TRANSACTIONS
+table name: USER_STATISTICS
+column_name: DENIED_CONNECTIONS
+table name: USER_STATISTICS
+column_name: LOST_CONNECTIONS
+table name: USER_STATISTICS
+column_name: ACCESS_DENIED
+table name: USER_STATISTICS
+column_name: EMPTY_QUERIES
+table name: USER_STATISTICS
+column_name: TOTAL_SSL_CONNECTIONS
+table name: USER_STATISTICS
+column_name: MAX_STATEMENT_TIME_EXCEEDED
+table name: INNODB_SYS_TABLESTATS
+column_name: TABLE_ID
+table name: INNODB_SYS_TABLESTATS
+column_name: NAME
+table name: INNODB_SYS_TABLESTATS
+column_name: STATS_INITIALIZED
+table name: INNODB_SYS_TABLESTATS
+column_name: NUM_ROWS
+table name: INNODB_SYS_TABLESTATS
+column_name: CLUST_INDEX_SIZE
+table name: INNODB_SYS_TABLESTATS
+column_name: OTHER_INDEX_SIZE
+table name: INNODB_SYS_TABLESTATS
+column_name: MODIFIED_COUNTER
+table name: INNODB_SYS_TABLESTATS
+column_name: AUTOINC
+table name: INNODB_SYS_TABLESTATS
+column_name: REF_COUNT
+table name: INNODB_LOCKS
+column_name: lock_id
+table name: INNODB_LOCKS
+column_name: lock_trx_id
+table name: INNODB_LOCKS
+column_name: lock_mode
+table name: INNODB_LOCKS
+column_name: lock_type
+table name: INNODB_LOCKS
+column_name: lock_table
+table name: INNODB_LOCKS
+column_name: lock_index
+table name: INNODB_LOCKS
+column_name: lock_space
+table name: INNODB_LOCKS
+column_name: lock_page
+table name: INNODB_LOCKS
+column_name: lock_rec
+table name: INNODB_LOCKS
+column_name: lock_data
+table name: INNODB_MUTEXES
+column_name: NAME
+table name: INNODB_MUTEXES
+column_name: CREATE_FILE
+table name: INNODB_MUTEXES
+column_name: CREATE_LINE
+table name: INNODB_MUTEXES
+column_name: OS_WAITS
+table name: INNODB_CMPMEM
+column_name: page_size
+table name: INNODB_CMPMEM
+column_name: buffer_pool_instance
+table name: INNODB_CMPMEM
+column_name: pages_used
+table name: INNODB_CMPMEM
+column_name: pages_free
+table name: INNODB_CMPMEM
+column_name: relocation_ops
+table name: INNODB_CMPMEM
+column_name: relocation_time
+table name: INNODB_CMP_PER_INDEX
+column_name: database_name
+table name: INNODB_CMP_PER_INDEX
+column_name: table_name
+table name: INNODB_CMP_PER_INDEX
+column_name: index_name
+table name: INNODB_CMP_PER_INDEX
+column_name: compress_ops
+table name: INNODB_CMP_PER_INDEX
+column_name: compress_ops_ok
+table name: INNODB_CMP_PER_INDEX
+column_name: compress_time
+table name: INNODB_CMP_PER_INDEX
+column_name: uncompress_ops
+table name: INNODB_CMP_PER_INDEX
+column_name: uncompress_time
+table name: INNODB_CMP
+column_name: page_size
+table name: INNODB_CMP
+column_name: compress_ops
+table name: INNODB_CMP
+column_name: compress_ops_ok
+table name: INNODB_CMP
+column_name: compress_time
+table name: INNODB_CMP
+column_name: uncompress_ops
+table name: INNODB_CMP
+column_name: uncompress_time
+table name: INNODB_FT_DELETED
+column_name: DOC_ID
+table name: INNODB_CMP_RESET
+column_name: page_size
+table name: INNODB_CMP_RESET
+column_name: compress_ops
+table name: INNODB_CMP_RESET
+column_name: compress_ops_ok
+table name: INNODB_CMP_RESET
+column_name: compress_time
+table name: INNODB_CMP_RESET
+column_name: uncompress_ops
+table name: INNODB_CMP_RESET
+column_name: uncompress_time
+table name: INNODB_LOCK_WAITS
+column_name: requesting_trx_id
+table name: INNODB_LOCK_WAITS
+column_name: requested_lock_id
+table name: INNODB_LOCK_WAITS
+column_name: blocking_trx_id
+table name: INNODB_LOCK_WAITS
+column_name: blocking_lock_id
+table name: TABLE_STATISTICS
+column_name: TABLE_SCHEMA
+table name: TABLE_STATISTICS
+column_name: TABLE_NAME
+table name: TABLE_STATISTICS
+column_name: ROWS_READ
+table name: TABLE_STATISTICS
+column_name: ROWS_CHANGED
+table name: TABLE_STATISTICS
+column_name: ROWS_CHANGED_X_INDEXES
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: SPACE
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: NAME
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: ENCRYPTION_SCHEME
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: KEYSERVER_REQUESTS
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: MIN_KEY_VERSION
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: CURRENT_KEY_VERSION
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: KEY_ROTATION_PAGE_NUMBER
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: KEY_ROTATION_MAX_PAGE_NUMBER
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: CURRENT_KEY_ID
+table name: INNODB_TABLESPACES_ENCRYPTION
+column_name: ROTATING_OR_FLUSHING
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: POOL_ID
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: LRU_POSITION
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: SPACE
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: PAGE_NUMBER
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: PAGE_TYPE
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: FLUSH_TYPE
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: FIX_COUNT
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: IS_HASHED
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: NEWEST_MODIFICATION
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: OLDEST_MODIFICATION
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: ACCESS_TIME
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: TABLE_NAME
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: INDEX_NAME
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: NUMBER_RECORDS
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: DATA_SIZE
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: COMPRESSED_SIZE
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: COMPRESSED
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: IO_FIX
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: IS_OLD
+table name: INNODB_BUFFER_PAGE_LRU
+column_name: FREE_PAGE_CLOCK
+table name: INNODB_SYS_FIELDS
+column_name: INDEX_ID
+table name: INNODB_SYS_FIELDS
+column_name: NAME
+table name: INNODB_SYS_FIELDS
+column_name: POS
+table name: INNODB_CMPMEM_RESET
+column_name: page_size
+table name: INNODB_CMPMEM_RESET
+column_name: buffer_pool_instance
+table name: INNODB_CMPMEM_RESET
+column_name: pages_used
+table name: INNODB_CMPMEM_RESET
+column_name: pages_free
+table name: INNODB_CMPMEM_RESET
+column_name: relocation_ops
+table name: INNODB_CMPMEM_RESET
+column_name: relocation_time
+table name: INNODB_SYS_COLUMNS
+column_name: TABLE_ID
+table name: INNODB_SYS_COLUMNS
+column_name: NAME
+table name: INNODB_SYS_COLUMNS
+column_name: POS
+table name: INNODB_SYS_COLUMNS
+column_name: MTYPE
+table name: INNODB_SYS_COLUMNS
+column_name: PRTYPE
+table name: INNODB_SYS_COLUMNS
+column_name: LEN
+table name: INNODB_FT_INDEX_TABLE
+column_name: WORD
+table name: INNODB_FT_INDEX_TABLE
+column_name: table_DOC_ID
+table name: INNODB_FT_INDEX_TABLE
+column_name: LAST_DOC_ID
+table name: INNODB_FT_INDEX_TABLE
+column_name: DOC_COUNT
+table name: INNODB_FT_INDEX_TABLE
+column_name: DOC_ID
+table name: INNODB_FT_INDEX_TABLE
+column_name: POSITION
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: database_name
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: table_name
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: index_name
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: compress_ops
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: compress_ops_ok
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: compress_time
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: uncompress_ops
+table name: INNODB_CMP_PER_INDEX_RESET
+column_name: uncompress_time
+table name: user_variables
+column_name: VARIABLE_NAME
+table name: user_variables
+column_name: VARIABLE_VALUE
+table name: user_variables
+column_name: VARIABLE_TYPE
+table name: user_variables
+column_name: CHARACTER_SET_NAME
+table name: INNODB_FT_INDEX_CACHE
+column_name: WORD
+table name: INNODB_FT_INDEX_CACHE
+column_name: table_DOC_ID
+table name: INNODB_FT_INDEX_CACHE
+column_name: LAST_DOC_ID
+table name: INNODB_FT_INDEX_CACHE
+column_name: DOC_COUNT
+table name: INNODB_FT_INDEX_CACHE
+column_name: DOC_ID
+table name: INNODB_FT_INDEX_CACHE
+column_name: POSITION
+table name: INNODB_SYS_FOREIGN_COLS
+column_name: ID
+table name: INNODB_SYS_FOREIGN_COLS
+column_name: FOR_COL_NAME
+table name: INNODB_SYS_FOREIGN_COLS
+column_name: REF_COL_NAME
+table name: INNODB_SYS_FOREIGN_COLS
+column_name: POS
+table name: INNODB_FT_BEING_DELETED
+column_name: DOC_ID
+table name: INNODB_BUFFER_POOL_STATS
+column_name: POOL_ID
+table name: INNODB_BUFFER_POOL_STATS
+column_name: POOL_SIZE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: FREE_BUFFERS
+table name: INNODB_BUFFER_POOL_STATS
+column_name: DATABASE_PAGES
+table name: INNODB_BUFFER_POOL_STATS
+column_name: OLD_DATABASE_PAGES
+table name: INNODB_BUFFER_POOL_STATS
+column_name: MODIFIED_DATABASE_PAGES
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PENDING_DECOMPRESS
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PENDING_READS
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PENDING_FLUSH_LRU
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PENDING_FLUSH_LIST
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_MADE_YOUNG
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_NOT_MADE_YOUNG
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_MADE_YOUNG_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_MADE_NOT_YOUNG_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_PAGES_READ
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_PAGES_CREATED
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_PAGES_WRITTEN
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_READ_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_CREATE_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: PAGES_WRITTEN_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_PAGES_GET
+table name: INNODB_BUFFER_POOL_STATS
+column_name: HIT_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: YOUNG_MAKE_PER_THOUSAND_GETS
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NOT_YOUNG_MAKE_PER_THOUSAND_GETS
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_PAGES_READ_AHEAD
+table name: INNODB_BUFFER_POOL_STATS
+column_name: NUMBER_READ_AHEAD_EVICTED
+table name: INNODB_BUFFER_POOL_STATS
+column_name: READ_AHEAD_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: READ_AHEAD_EVICTED_RATE
+table name: INNODB_BUFFER_POOL_STATS
+column_name: LRU_IO_TOTAL
+table name: INNODB_BUFFER_POOL_STATS
+column_name: LRU_IO_CURRENT
+table name: INNODB_BUFFER_POOL_STATS
+column_name: UNCOMPRESS_TOTAL
+table name: INNODB_BUFFER_POOL_STATS
+column_name: UNCOMPRESS_CURRENT
+table name: INNODB_TRX
+column_name: trx_id
+table name: INNODB_TRX
+column_name: trx_state
+table name: INNODB_TRX
+column_name: trx_started
+table name: INNODB_TRX
+column_name: trx_requested_lock_id
+table name: INNODB_TRX
+column_name: trx_wait_started
+table name: INNODB_TRX
+column_name: trx_weight
+table name: INNODB_TRX
+column_name: trx_mysql_thread_id
+table name: INNODB_TRX
+column_name: trx_query
+table name: INNODB_TRX
+column_name: trx_operation_state
+table name: INNODB_TRX
+column_name: trx_tables_in_use
+table name: INNODB_TRX
+column_name: trx_tables_locked
+table name: INNODB_TRX
+column_name: trx_lock_structs
+table name: INNODB_TRX
+column_name: trx_lock_memory_bytes
+table name: INNODB_TRX
+column_name: trx_rows_locked
+table name: INNODB_TRX
+column_name: trx_rows_modified
+table name: INNODB_TRX
+column_name: trx_concurrency_tickets
+table name: INNODB_TRX
+column_name: trx_isolation_level
+table name: INNODB_TRX
+column_name: trx_unique_checks
+table name: INNODB_TRX
+column_name: trx_foreign_key_checks
+table name: INNODB_TRX
+column_name: trx_last_foreign_key_error
+table name: INNODB_TRX
+column_name: trx_is_read_only
+table name: INNODB_TRX
+column_name: trx_autocommit_non_locking
+table name: INNODB_SYS_FOREIGN
+column_name: ID
+table name: INNODB_SYS_FOREIGN
+column_name: FOR_NAME
+table name: INNODB_SYS_FOREIGN
+column_name: REF_NAME
+table name: INNODB_SYS_FOREIGN
+column_name: N_COLS
+table name: INNODB_SYS_FOREIGN
+column_name: TYPE
+table name: INNODB_SYS_TABLES
+column_name: TABLE_ID
+table name: INNODB_SYS_TABLES
+column_name: NAME
+table name: INNODB_SYS_TABLES
+column_name: FLAG
+table name: INNODB_SYS_TABLES
+column_name: N_COLS
+table name: INNODB_SYS_TABLES
+column_name: SPACE
+table name: INNODB_SYS_TABLES
+column_name: ROW_FORMAT
+table name: INNODB_SYS_TABLES
+column_name: ZIP_PAGE_SIZE
+table name: INNODB_SYS_TABLES
+column_name: SPACE_TYPE
+table name: INNODB_FT_DEFAULT_STOPWORD
+column_name: value
+table name: INNODB_FT_CONFIG
+column_name: KEY
+table name: INNODB_FT_CONFIG
+column_name: VALUE
+table name: INNODB_BUFFER_PAGE
+column_name: POOL_ID
+table name: INNODB_BUFFER_PAGE
+column_name: BLOCK_ID
+table name: INNODB_BUFFER_PAGE
+column_name: SPACE
+table name: INNODB_BUFFER_PAGE
+column_name: PAGE_NUMBER
+table name: INNODB_BUFFER_PAGE
+column_name: PAGE_TYPE
+table name: INNODB_BUFFER_PAGE
+column_name: FLUSH_TYPE
+table name: INNODB_BUFFER_PAGE
+column_name: FIX_COUNT
+table name: INNODB_BUFFER_PAGE
+column_name: IS_HASHED
+table name: INNODB_BUFFER_PAGE
+column_name: NEWEST_MODIFICATION
+table name: INNODB_BUFFER_PAGE
+column_name: OLDEST_MODIFICATION
+table name: INNODB_BUFFER_PAGE
+column_name: ACCESS_TIME
+table name: INNODB_BUFFER_PAGE
+column_name: TABLE_NAME
+table name: INNODB_BUFFER_PAGE
+column_name: INDEX_NAME
+table name: INNODB_BUFFER_PAGE
+column_name: NUMBER_RECORDS
+table name: INNODB_BUFFER_PAGE
+column_name: DATA_SIZE
+table name: INNODB_BUFFER_PAGE
+column_name: COMPRESSED_SIZE
+table name: INNODB_BUFFER_PAGE
+column_name: PAGE_STATE
+table name: INNODB_BUFFER_PAGE
+column_name: IO_FIX
+table name: INNODB_BUFFER_PAGE
+column_name: IS_OLD
+table name: INNODB_BUFFER_PAGE
+column_name: FREE_PAGE_CLOCK
+table name: INNODB_SYS_TABLESPACES
+column_name: SPACE
+table name: INNODB_SYS_TABLESPACES
+column_name: NAME
+table name: INNODB_SYS_TABLESPACES
+column_name: FLAG
+table name: INNODB_SYS_TABLESPACES
+column_name: ROW_FORMAT
+table name: INNODB_SYS_TABLESPACES
+column_name: PAGE_SIZE
+table name: INNODB_SYS_TABLESPACES
+column_name: ZIP_PAGE_SIZE
+table name: INNODB_SYS_TABLESPACES
+column_name: SPACE_TYPE
+table name: INNODB_SYS_TABLESPACES
+column_name: FS_BLOCK_SIZE
+table name: INNODB_SYS_TABLESPACES
+column_name: FILE_SIZE
+table name: INNODB_SYS_TABLESPACES
+column_name: ALLOCATED_SIZE
+table name: INNODB_METRICS
+column_name: NAME
+table name: INNODB_METRICS
+column_name: SUBSYSTEM
+table name: INNODB_METRICS
+column_name: COUNT
+table name: INNODB_METRICS
+column_name: MAX_COUNT
+table name: INNODB_METRICS
+column_name: MIN_COUNT
+table name: INNODB_METRICS
+column_name: AVG_COUNT
+table name: INNODB_METRICS
+column_name: COUNT_RESET
+table name: INNODB_METRICS
+column_name: MAX_COUNT_RESET
+table name: INNODB_METRICS
+column_name: MIN_COUNT_RESET
+table name: INNODB_METRICS
+column_name: AVG_COUNT_RESET
+table name: INNODB_METRICS
+column_name: TIME_ENABLED
+table name: INNODB_METRICS
+column_name: TIME_DISABLED
+table name: INNODB_METRICS
+column_name: TIME_ELAPSED
+table name: INNODB_METRICS
+column_name: TIME_RESET
+table name: INNODB_METRICS
+column_name: STATUS
+table name: INNODB_METRICS
+column_name: TYPE
+table name: INNODB_METRICS
+column_name: COMMENT
+table name: INNODB_SYS_INDEXES
+column_name: INDEX_ID
+table name: INNODB_SYS_INDEXES
+column_name: NAME
+table name: INNODB_SYS_INDEXES
+column_name: TABLE_ID
+table name: INNODB_SYS_INDEXES
+column_name: TYPE
+table name: INNODB_SYS_INDEXES
+column_name: N_FIELDS
+table name: INNODB_SYS_INDEXES
+column_name: PAGE_NO
+table name: INNODB_SYS_INDEXES
+column_name: SPACE
+table name: INNODB_SYS_INDEXES
+column_name: MERGE_THRESHOLD
+table name: INNODB_SYS_VIRTUAL
+column_name: TABLE_ID
+table name: INNODB_SYS_VIRTUAL
+column_name: POS
+table name: INNODB_SYS_VIRTUAL
+column_name: BASE_POS
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: SPACE
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: NAME
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: COMPRESSED
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: LAST_SCRUB_COMPLETED
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: CURRENT_SCRUB_STARTED
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: CURRENT_SCRUB_ACTIVE_THREADS
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: CURRENT_SCRUB_PAGE_NUMBER
+table name: INNODB_TABLESPACES_SCRUBBING
+column_name: CURRENT_SCRUB_MAX_PAGE_NUMBER
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: THREAD_ID
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: OBJECT_NAME
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: FILE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: LINE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: WAIT_TIME
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: WAIT_OBJECT
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: WAIT_TYPE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: HOLDER_THREAD_ID
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: HOLDER_FILE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: HOLDER_LINE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: CREATED_FILE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: CREATED_LINE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: WRITER_THREAD
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: RESERVATION_MODE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: READERS
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: WAITERS_FLAG
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: LOCK_WORD
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: LAST_WRITER_FILE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: LAST_WRITER_LINE
+table name: INNODB_SYS_SEMAPHORE_WAITS
+column_name: OS_WAIT_COUNT
+table name: guestbook
+column_name: comment_id
+table name: guestbook
+column_name: comment
+table name: guestbook
+column_name: name
+table name: users
+column_name: user_id
+table name: users
+column_name: table_name
+table name: users
+column_name: last_name
+table name: users
+column_name: user
+table name: users
+column_name: password
+table name: users
+column_name: avatar
+table name: users
+column_name: last_login
+table name: users
+column_name: failed_login
