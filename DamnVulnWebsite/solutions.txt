@@ -44,6 +44,7 @@ to upload reverse shell:
 ##medium
 	* the code removes tha patern <../> , so use <.../...//> instead.
 	* <.../...//.../...//hackable/flags/fi.php> works!
+	* seems like it doesnt like http as well... lets use the same trick! <h../t../t../p> instead of <http>.
 
 #File Upload
 ##low
