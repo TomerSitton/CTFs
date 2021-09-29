@@ -1,0 +1,73 @@
+<!-- Simple PHP backdoor by DK (http://michaeldaw.org) -->
+
+<pre>USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1   3404  1832 ?        Ss   Sep22   0:00 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Sep22   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Sep22   0:01 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    Sep22   0:00 [migration/0]
+root         8  0.0  0.0      0     0 ?        S    Sep22   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Sep22   0:07 [rcu_sched]
+root        10  0.0  0.0      0     0 ?        S    Sep22   0:00 [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S<   Sep22   0:00 [khelper]
+root        12  0.0  0.0      0     0 ?        S    Sep22   0:00 [kdevtmpfs]
+root        13  0.0  0.0      0     0 ?        S<   Sep22   0:00 [netns]
+root        14  0.0  0.0      0     0 ?        S<   Sep22   0:00 [writeback]
+root        15  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kintegrityd]
+root        16  0.0  0.0      0     0 ?        S<   Sep22   0:00 [bioset]
+root        17  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kworker/u3:0]
+root        18  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kblockd]
+root        19  0.0  0.0      0     0 ?        S<   Sep22   0:00 [ata_sff]
+root        20  0.0  0.0      0     0 ?        S    Sep22   0:00 [khubd]
+root        21  0.0  0.0      0     0 ?        S<   Sep22   0:00 [md]
+root        22  0.0  0.0      0     0 ?        S<   Sep22   0:00 [devfreq_wq]
+root        23  0.0  0.0      0     0 ?        S    Sep22   0:18 [kworker/0:1]
+root        25  0.0  0.0      0     0 ?        S    Sep22   0:00 [khungtaskd]
+root        26  0.0  0.0      0     0 ?        S    Sep22   0:00 [kswapd0]
+root        27  0.0  0.0      0     0 ?        SN   Sep22   0:00 [ksmd]
+root        28  0.0  0.0      0     0 ?        SN   Sep22   0:00 [khugepaged]
+root        29  0.0  0.0      0     0 ?        S    Sep22   0:00 [fsnotify_mark]
+root        30  0.0  0.0      0     0 ?        S    Sep22   0:00 [ecryptfs-kthrea]
+root        31  0.0  0.0      0     0 ?        S<   Sep22   0:00 [crypto]
+root        43  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kthrotld]
+root        46  0.0  0.0      0     0 ?        S    Sep22   0:00 [scsi_eh_0]
+root        47  0.0  0.0      0     0 ?        S    Sep22   0:00 [scsi_eh_1]
+root        48  0.0  0.0      0     0 ?        S    Sep22   0:06 [kworker/u2:2]
+root        50  0.0  0.0      0     0 ?        S<   Sep22   0:00 [dm_bufio_cache]
+root        70  0.0  0.0      0     0 ?        S<   Sep22   0:00 [deferwq]
+root        71  0.0  0.0      0     0 ?        S<   Sep22   0:00 [charger_manager]
+root       104  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kworker/u3:1]
+root       215  0.0  0.0      0     0 ?        S    Sep22   0:00 [scsi_eh_2]
+root       230  0.0  0.0      0     0 ?        S    Sep22   0:00 [jbd2/sda1-8]
+root       231  0.0  0.0      0     0 ?        S<   Sep22   0:00 [ext4-rsv-conver]
+root       232  0.0  0.0      0     0 ?        S<   Sep22   0:00 [ext4-unrsv-conv]
+root       319  0.0  0.0   2832   608 ?        S    Sep22   0:00 upstart-udev-bridge --daemon
+root       321  0.0  0.1   2972  1168 ?        Ss   Sep22   0:00 /sbin/udevd --daemon
+102        429  0.0  0.0   3256   656 ?        Ss   Sep22   0:00 dbus-daemon --system --fork --activation=upstart
+syslog     432  0.0  0.1  30312  1360 ?        Sl   Sep22   0:04 rsyslogd -c5
+root       458  0.0  0.0   2968   716 ?        S    Sep22   0:00 /sbin/udevd --daemon
+root       470  0.0  0.0   2968   760 ?        S    Sep22   0:00 /sbin/udevd --daemon
+root       472  0.0  0.0      0     0 ?        S<   Sep22   0:00 [ttm_swap]
+root       521  0.0  0.0      0     0 ?        S<   Sep22   0:00 [kpsmoused]
+root       530  0.0  0.0      0     0 ?        S    Sep22   0:00 [kworker/0:2]
+root       531  0.0  0.0   2844   352 ?        S    Sep22   0:00 upstart-socket-bridge --daemon
+root       562  0.0  0.0   2924   836 ?        Ss   Sep22   0:00 dhclient3 -e IF_METRIC=100 -pf /var/run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -1 eth0
+root       592  0.0  0.2   6680  2404 ?        Ss   Sep22   0:00 /usr/sbin/sshd -D
+root       672  0.0  0.0   4628   840 tty4     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty4
+root       681  0.0  0.0   4628   840 tty5     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty5
+root       686  0.0  0.0   4628   836 tty2     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty2
+root       705  0.0  0.0   4628   844 tty3     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty3
+root       707  0.0  0.0   4628   836 tty6     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty6
+root       711  0.0  0.0   2616   908 ?        Ss   Sep22   0:00 cron
+daemon     712  0.0  0.0   2468   344 ?        Ss   Sep22   0:00 atd
+www-data   745  0.0  0.2   8272  2232 ?        S    Sep22   0:02 /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf
+www-data   748  0.0  0.4  17844  4720 ?        Ss   Sep22   0:00 /usr/bin/php-cgi
+www-data   781  0.0  0.2  18100  3020 ?        S    Sep22   0:00 /usr/bin/php-cgi
+www-data   782  0.0  0.2  18356  3012 ?        S    Sep22   0:00 /usr/bin/php-cgi
+www-data   783  0.0  0.2  18356  3048 ?        S    Sep22   0:00 /usr/bin/php-cgi
+www-data   784  0.0  0.2  18100  3016 ?        S    Sep22   0:00 /usr/bin/php-cgi
+root       795  0.0  0.0   4628   836 tty1     Ss+  Sep22   0:00 /sbin/getty -8 38400 tty1
+root      3968  0.0  0.0      0     0 ?        S    01:13   0:00 [kworker/u2:1]
+www-data 19223  0.0  0.0   2232   540 ?        S    01:29   0:00 sh -c ps aux
+www-data 19224  0.0  0.1   2860  1036 ?        R    01:29   0:00 ps aux
+</pre>

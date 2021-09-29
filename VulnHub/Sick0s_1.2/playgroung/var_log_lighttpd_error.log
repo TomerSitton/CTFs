@@ -1,0 +1,86 @@
+<pre>2021-09-19 06:25:02: (server.c.1196) logfiles cycled UID = 0 PID = 2285 
+2021-09-19 10:07:00: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:2212 (Connection timed out) in /var/www/test/rev.php on line 100
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+ 
+2021-09-19 10:07:11: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:2212 (Connection timed out) in /var/www/test/rev.php on line 100
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+ 
+2021-09-19 10:07:24: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:2212 (Connection timed out) in /var/www/test/rev.php on line 100
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 184
+ 
+2021-09-19 10:21:25: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/small_rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:2212 (Connection timed out) in /var/www/test/small_rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/small_rev.php on line 85
+ 
+2021-09-19 10:30:50: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev2.php on line 102
+PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:2212 (Connection timed out) in /var/www/test/rev2.php on line 36
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev2.php on line 102
+ 
+2021-09-19 10:30:58: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/test.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:2212 (Connection timed out) in /var/www/test/test.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/test.php on line 85
+ 
+2021-09-19 10:31:01: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 139
+PHP Warning:  fsockopen(): unable to connect to 127.0.0.1:1234 (Connection timed out) in /var/www/test/rev.php on line 55
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 139
+ 
+2021-09-19 10:31:05: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/small_rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:2212 (Connection timed out) in /var/www/test/small_rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/small_rev.php on line 85
+ 
+2021-09-19 10:36:02: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:38:15: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:38:31: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:38:31: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:38:32: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:38:45: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:01: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:01: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:02: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:15: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:31: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-19 10:39:43: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+PHP Warning:  fsockopen(): unable to connect to 10.0.2.7:5990 (Connection timed out) in /var/www/test/rev.php on line 33
+PHP Notice:  Undefined variable: daemon in /var/www/test/rev.php on line 85
+ 
+2021-09-22 06:08:30: (log.c.166) server started 
+2021-09-22 12:06:55: (log.c.166) server started 
+2021-09-22 12:10:58: (mod_fastcgi.c.2701) FastCGI-stderr: PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /var/www/test/tiny2.php on line 3
+ 
+</pre>
