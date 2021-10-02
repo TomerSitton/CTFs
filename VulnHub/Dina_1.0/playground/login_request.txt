@@ -1,0 +1,14 @@
+POST /SecreTSMSgatwayLogin/index.php?app=main&inc=core_auth&route=login&op=login HTTP/1.1
+Host: 10.0.2.9
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.0.2.9/SecreTSMSgatwayLogin/index.php?app=main&inc=core_auth&route=login
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 74
+Connection: close
+Cookie: PHPSESSID=oqvnq8q2jrin5ck2dav7ts28r5
+Upgrade-Insecure-Requests: 1
+
+X-CSRF-Token=676afa88cb4e37aaf04ca89102390692&username=touhid&password=FUZZ
