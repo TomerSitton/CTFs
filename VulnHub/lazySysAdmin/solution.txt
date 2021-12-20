@@ -1,0 +1,18 @@
+1. from the nmap we see web, ssh, smb, mysql, and irc
+
+2. trying to play with the irc gave me absolutely nothing
+
+3. running gobuster on the website we find /wordpress folder, and a user named Togie
+
+4. apperently anonymous smb connection is allowed.
+   connecting with smbclient to share$ and get the:
+   * wp-config.php file. 
+   		now we have wp user and password! - Admin:TogieMYSQL12345^^
+   * deets.txt file.
+   		another password... - 12345
+
+
+5. connect to the wp-admin page with Admin:TogieMYSQL12345^^
+   upload reverse shell as a plugin and.... we have a shell!!
+
+6. sudo with password 12345 and we won :)

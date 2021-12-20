@@ -1,0 +1,8 @@
+/.htaccess            (Status: 403) [Size: 295]
+/.htpasswd            (Status: 403) [Size: 295]
+/.hta                 (Status: 403) [Size: 290]
+/index.php            (Status: 301) [Size: 0] [--> http://10.0.2.15/wordpress/]
+/wp-admin             (Status: 301) [Size: 318] [--> http://10.0.2.15/wordpress/wp-admin/]
+/wp-content           (Status: 301) [Size: 320] [--> http://10.0.2.15/wordpress/wp-content/]
+/wp-includes          (Status: 301) [Size: 321] [--> http://10.0.2.15/wordpress/wp-includes/]
+/xmlrpc.php           (Status: 405) [Size: 42]
