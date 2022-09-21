@@ -1,0 +1,5 @@
+notes:
+
+1. create wordlist to bruteforce using known words (like the name of the author, h1dden, etc...)
+2. investingate the h1dd3n jpeg
+3. maybe answers only when not flashedlighted

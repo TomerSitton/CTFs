@@ -1,0 +1,7 @@
+Barry, from ssh banner
+Harry, from ftp banner
+Elly, from note
+John, from note
+Fred, from kathy share
+Scott, from message2.jpg on port 666
+Kathy, from kathy share
