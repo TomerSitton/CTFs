@@ -1,0 +1,5 @@
+http://photobomb.htb
+http://photobomb.htb/printer
+http://photobomb.htb/
+http://photobomb.htb//
+http://photobomb.htb//printer

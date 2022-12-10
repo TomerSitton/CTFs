@@ -1,0 +1,4 @@
+http://unika.htb/index.php?page=french.html:info@unika.htb
+http://unika.htb/:info@unika.htb
+http://unika.htb:info@unika.htb
+http://unika.htb/index.php?page=german.html:info@unika.htb

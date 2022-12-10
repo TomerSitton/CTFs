@@ -1,0 +1,11 @@
+2022/10/06 16:12:27 >  Using KDC(s):
+2022/10/06 16:12:27 >  	10.10.11.174:88
+2022/10/06 16:12:34 >  [+] VALID USERNAME:	 support@support.htb
+2022/10/06 16:12:38 >  [+] VALID USERNAME:	 guest@support.htb
+2022/10/06 16:13:10 >  [+] VALID USERNAME:	 administrator@support.htb
+2022/10/06 16:17:34 >  [+] VALID USERNAME:	 Guest@support.htb
+2022/10/06 16:17:35 >  [+] VALID USERNAME:	 Administrator@support.htb
+2022/10/06 16:29:42 >  [+] VALID USERNAME:	 management@support.htb
+2022/10/06 16:31:17 >  [+] VALID USERNAME:	 Support@support.htb
+2022/10/06 16:35:17 >  [+] VALID USERNAME:	 GUEST@support.htb
+2022/10/06 18:00:26 >  [+] VALID USERNAME:	 SUPPORT@support.htb

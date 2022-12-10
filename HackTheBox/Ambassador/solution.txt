@@ -1,0 +1,6 @@
+grafana on port 3000. vuln to file read CVE-2021-43798.
+the grafana folder is /usr/share/grafana (for exampl:/usr/share/grafana/conf/defaults.ini)
+got config from /etc/grafana/grafana.ini and creds - admin:messageInABottle685427
+got apache conf from /etc/apache2/apache2.conf
+the website location is /var/www/html
+checked /etc/environment and found only PATH

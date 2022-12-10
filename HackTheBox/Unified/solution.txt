@@ -1,0 +1,10 @@
+# getting shell
+* enum find ports 6789,8080,8443,8843,8880
+* 8443 is UNIFI Network version 6.4.54 vulnerable to Log4J
+* read this article - https://www.sprocketsecurity.com/resources/another-log4j-on-the-fire-unifi
+* tried payload with dnslog but didnt work - maybe the box cant query internet?
+* used this POC like a stupid script kiddie and it worked - https://github.com/puzzlepeaches/Log4jUnifi 
+* ---- need to read more about this exploit ----
+
+
+# PE 

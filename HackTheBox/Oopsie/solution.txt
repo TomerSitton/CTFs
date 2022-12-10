@@ -1,0 +1,33 @@
+# getting shell on the box
+* regular nmap. 80 and 22 Ubuntu discoverd.
+* started gobuster for files and folder (php extention)
+* found mail admin@megacorp.com. added megacorp to hosts and started subdomain enumeration with wfuzz.
+* started nmap on all ports caus everything else was still running and got a bit stuck
+* ran photon and found path /cgi-bin/login! 
+* was able to login as guest user.
+* looked around. a lot of stuff:
+	** upload file (needs "super admin" privileges)
+	** account page (uri: /cdn-cgi/login/admin.php?content=accounts&id=2)
+	* messing around with this alittle showed we can view data of other users by manipulating the "id" variable:
+		Access ID	Name	Email
+			2233	guest	guest@megacorp.com
+			34322	admin	admin@megacorp.com
+
+			8832	john	john@tafcz.co.uk
+
+	* thought about trying sqli and stuff but then remembered that maybe it will be a good idea to run bruteforce on the login panel first
+* saving the login request in burp, I found a nice looking cookies in there - "Cookie: user=2233; role=guest". 2233 is the "Access ID" of guest, so what if we change it to something else...? 
+* Changed it to 34322 in CookieManager and BOOM - was able to access the "Uploads" pabel and upload a simple php shell!!!!
+* the file of course was saved in /uploads/simple-backdoor.php
+# PE
+* found user flag in /home/robert/user.txt
+* found creds in /var/www/html/cdn-cgi/login/db.php:
+	$conn = mysqli_connect('localhost','robert','M3g4C0rpUs3r!','garage');
+* searched for SUIDs but didnt find anything usefull (aka didn't look good enough -_-)
+* with a bit help from the question, searched for files belonging to "bugtracker" group (robert's group) and found /usr/bin/bugtracker (SUID)
+* it seems to look for files in /root/reports. letting it read "../../tmp/hi" worked, and also "root.txt"
+* using "1;/bin/bash" did the final trick and I got root shell :)
+
+
+user.txt - f2c74ee8db7983851ab2a96a44eb7981
+root.txt - af13b0bee69f8a877c3faf667f7beacf

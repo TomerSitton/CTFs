@@ -1,0 +1,12 @@
+http://unika.htb/inc/owl-carousel/js/owl.carousel.min.js
+http://unika.htb/inc/jquery.easing.min.js
+http://unika.htb/inc/smoothscroll.js
+http://unika.htb/inc/classie.js
+http://unika.htb/inc/jquery.counterup.min.js
+http://unika.htb/inc/bootstrap/js/bootstrap.min.js
+http://unika.htb/js/theme.js
+http://unika.htb/inc/waypoints.min.js
+http://unika.htb/inc/jquery/jquery-1.11.1.min.js
+http://unika.htb/inc/animations/js/wow.min.js
+http://unika.htb/inc/stellar/js/jquery.stellar.min.js
+http://unika.htb/inc/isotope.pkgd.min.js

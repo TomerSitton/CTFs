@@ -1,0 +1,55 @@
+gobuster dir -u http://10.129.117.65 -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-files.txt  -x php -c PHPSESSID=1oput4gva3amr47kvtqbgaob5m
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.117.65
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-files.txt
+[+] Negative Status codes:   404
+[+] Cookies:                 PHPSESSID=1oput4gva3amr47kvtqbgaob5m
+[+] User Agent:              gobuster/3.1.0
+[+] Extensions:              php
+[+] Timeout:                 10s
+===============================================================
+2022/09/26 16:53:31 Starting gobuster in directory enumeration mode
+===============================================================
+/index.php            (Status: 200) [Size: 2312]
+/.htaccess            (Status: 403) [Size: 278] 
+/.htaccess.php        (Status: 403) [Size: 278] 
+/style.css            (Status: 200) [Size: 3274]
+/license.txt          (Status: 200) [Size: 1100]
+/.                    (Status: 200) [Size: 2312]
+/.html                (Status: 403) [Size: 278] 
+/.html.php            (Status: 403) [Size: 278] 
+/.php                 (Status: 403) [Size: 278] 
+/dashboard.php        (Status: 200) [Size: 2449]
+/.htpasswd            (Status: 403) [Size: 278] 
+/.htpasswd.php        (Status: 403) [Size: 278] 
+/.htm                 (Status: 403) [Size: 278] 
+/.htm.php             (Status: 403) [Size: 278] 
+/.htpasswds           (Status: 403) [Size: 278] 
+/.htpasswds.php       (Status: 403) [Size: 278] 
+/.htgroup             (Status: 403) [Size: 278] 
+/.htgroup.php         (Status: 403) [Size: 278] 
+/wp-forum.phps        (Status: 403) [Size: 278] 
+/.htaccess.bak        (Status: 403) [Size: 278] 
+/.htaccess.bak.php    (Status: 403) [Size: 278] 
+Progress: 16500 / 34260 (48.16%)               [ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/printer.jsp": dial tcp 10.129.117.65:80: connect: connection refused
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/price_list.php.php": dial tcp 10.129.117.65:80: connect: connection refused
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/print_friendly.php.php": dial tcp 10.129.117.65:80: connect: connection refused
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/print.jsp": dial tcp 10.129.117.65:80: connect: connection refused
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/printflyer.asp": read tcp 10.10.15.111:44126->10.129.117.65:80: read: connection reset by peer
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/printable.asp": read tcp 10.10.15.111:44124->10.129.117.65:80: read: connection reset by peer
+[ERROR] 2022/09/26 16:55:01 [!] Get "http://10.129.117.65/print_view.php": read tcp 10.10.15.111:44130->10.129.117.65:80: read: connection reset by peer
+/.htuser              (Status: 403) [Size: 278] 
+/.htuser.php          (Status: 403) [Size: 278] 
+/.ht.php              (Status: 403) [Size: 278] 
+/.htc                 (Status: 403) [Size: 278] 
+/.ht                  (Status: 403) [Size: 278] 
+/.htc.php             (Status: 403) [Size: 278] 
+                                                
+===============================================================
+2022/09/26 16:56:45 Finished
+===============================================================

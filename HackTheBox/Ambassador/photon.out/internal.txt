@@ -1,0 +1,15 @@
+https://example.org/tags/
+http://example.org//posts/welcome-to-the-ambassador-development-server//
+http://example.org///
+http://example.org///posts/welcome-to-the-ambassador-development-server/
+https://example.org/
+http://example.org/posts/welcome-to-the-ambassador-development-server///
+http://example.org
+http://example.org/posts/welcome-to-the-ambassador-development-server//
+http://example.org/posts/welcome-to-the-ambassador-development-server/
+http://example.org//posts/welcome-to-the-ambassador-development-server/
+https://example.org/posts/welcome-to-the-ambassador-development-server/
+https://example.org/posts/
+https://example.org/categories/
+http://example.org/
+http://example.org//

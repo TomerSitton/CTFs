@@ -1,0 +1,4 @@
+http://shoppy.htb/js/jquery.js
+http://shoppy.htb/js/jquery.countdown.min.js
+http://shoppy.htb/js/plugins.js
+http://shoppy.htb/js/main.js

@@ -1,0 +1,18 @@
+===============================================================                                                   
+Gobuster v3.1.0                                                                                                   
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)                                                     
+===============================================================                                                   
+[+] Url:                     http://shoppy.htb/                                                                   
+[+] Method:                  GET                                                                                  
+[+] Threads:                 10                                                                                   
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-files.txt            
+[+] Negative Status codes:   404                                                                                  
+[+] User Agent:              gobuster/3.1.0                                                                       
+[+] Extensions:              php                                                                                  
+[+] Timeout:                 10s                                                                                  
+===============================================================                                                   
+2022/11/04 11:20:04 Starting gobuster in directory enumeration mode                                               
+===============================================================                                                   
+/favicon.ico          (Status: 200) [Size: 213054]
+/.                    (Status: 301) [Size: 169] [--> /./]
+         

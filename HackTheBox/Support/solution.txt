@@ -1,0 +1,73 @@
+# getting shell
+* looks like DC from port scan
+* smbclient without user gives us this:
+        Sharename       Type      Comment
+        ---------       ----      -------
+        ADMIN$          Disk      Remote Admin
+        C$              Disk      Default share
+        IPC$            IPC       Remote IPC
+        NETLOGON        Disk      Logon server share 
+        support-tools   Disk      support staff tools
+        SYSVOL          Disk      Logon server share 
+
+* cme output:
+	SMB         10.10.11.174    445    DC               Windows 10.0 Build 20348 x64 (name:DC) (domain:support.htb) (signing:True) (SMBv1:False)
+* kerberute found some usernames (with xato-net-10-million-usernames.txt) from Seclists:
+	support@support.htb
+	guest@support.htb
+	administrator@support.htb
+	management@support.htb
+
+## the long and sad jurney of a guest user...
+* tried getting passwords with GetNPUsers.py but all users must use preauth (User doesn't have UF_DONT_REQUIRE_PREAUTH set)
+* tried to use the 'guest' user with blank password and in worked!!!
+	python3 /usr/share/doc/python3-impacket/examples/smbclient.py support.htb/guest@10.10.11.174 -no-pass
+* can access the support-tools share now!
+	-rw-rw-rw-    2880728  Sat May 28 07:19:19 2022 7-ZipPortable_21.07.paf.exe
+	-rw-rw-rw-    5439245  Sat May 28 07:19:55 2022 npp.8.4.1.portable.x64.zip
+	-rw-rw-rw-    1273576  Sat May 28 07:20:06 2022 putty.exe
+	-rw-rw-rw-   48102161  Sat May 28 07:19:31 2022 SysinternalsSuite.zip
+	-rw-rw-rw-     277499  Wed Jul 20 13:01:07 2022 UserInfo.exe.zip
+	-rw-rw-rw-      79171  Sat May 28 07:20:17 2022 windirstat1_1_2_setup.exe
+	-rw-rw-rw-   44398000  Sat May 28 07:19:43 2022 WiresharkPortable64_3.6.5.paf.exe
+* kerberute on the other users (support,administrator,management) for passwords didnt work :(
+	kerbrute bruteuser --dc 10.10.11.174 -d support.htb /usr/share/wordlists/rockyou.txt <username>
+* ran ldapdomaindump with the guest user but got empty results
+	ldapdomaindump -u support.htb\\guest DC.support.htb
+* tried some other tools (again - with no deep investigation). most of them gave me nothing and some of them gave me stuff I didnt understand/didnt know how they got them so I took a step back
+	pywerview
+	crackmapexec
+	ldapsearch
+	enum4linux
+* tried to do some enumerations with rpcclient but most of the stuff I asked for returned NT_STATUS_ACCESS_DENIED
+	rpcclient -U support.htb/guest 10.10.11.174
+	** srvinfo - WORKED
+		10.10.11.174   Wk Sv PDC Tim NT     
+	        platform_id     :       500
+	        os version      :       10.0
+	        server type     :       0x80102b
+	** querydispinfo - NT_STATUS_ACCESS_DENIED
+	** enumdomusers - NT_STATUS_ACCESS_DENIED
+	** lookupnames - WORKED
+	** enumdomains - NT_STATUS_ACCESS_DENIED
+	** lsaquery - WORKED (I guess this is how you can get the SID of the domain)
+		Domain Sid: S-1-5-21-1677581083-3380853377-188903654
+* as always - HackTricks 4 The rescue!
+	** from the "139,445 - Pentesting SMB" page I found this tool called "lookupsid.py"
+	** running it gave me a bunch of users!
+		python3 /usr/share/doc/python3-impacket/examples/lookupsid.py support.htb/guest@DC.support.htb
+	** This tool gets the SID of the domain and queries the RPC service about all the possible RIDs. if matched - we got a user!
+
+
+** management and support TGS crack with didnt work :(
+
+# TODO
+* maybe exiftool to find more users..?
+* maybe addnsdump for other usefull strings?
+# Questions remaining
+## Primary questions
+* Why rpcclient commands like querydispinfo,enumdomusers,queryuser etc failed with NT_STATUS_ACCESS_DENIED? (even querying stuff like my own user details: queryuser 501)
+* folow-up question - Why other stuff did work? like "lookupnames" and "srvinfo"?
+* follow-follow up question - how the hell did lookupsid was able to query SIDs and I wasnt able to do it using rpcclient manually?
+## Secondary questions
+* how does enum4linux gets its information? (specifically "Known Usernames",SID,and RID ranges) 

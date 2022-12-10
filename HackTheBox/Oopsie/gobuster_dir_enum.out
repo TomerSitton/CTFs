@@ -1,0 +1,117 @@
+ gobuster dir -u http://10.129.28.172/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-words.txt -x php
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.129.28.172/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-words.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Extensions:              php
+[+] Timeout:                 10s
+===============================================================
+2022/09/25 14:24:53 Starting gobuster in directory enumeration mode
+===============================================================
+/.php                 (Status: 403) [Size: 278]
+/images               (Status: 301) [Size: 315] [--> http://10.129.28.172/images/]
+/.html.php            (Status: 403) [Size: 278]                                   
+/.html                (Status: 403) [Size: 278]                                   
+/themes               (Status: 301) [Size: 315] [--> http://10.129.28.172/themes/]
+/js                   (Status: 301) [Size: 311] [--> http://10.129.28.172/js/]    
+/index.php            (Status: 200) [Size: 10932]                                 
+/css                  (Status: 301) [Size: 312] [--> http://10.129.28.172/css/]   
+/.htm                 (Status: 403) [Size: 278]                                   
+/.htm.php             (Status: 403) [Size: 278]                                   
+/uploads              (Status: 301) [Size: 316] [--> http://10.129.28.172/uploads/]
+/.                    (Status: 200) [Size: 10932]                                  
+/fonts                (Status: 301) [Size: 314] [--> http://10.129.28.172/fonts/]  
+/.htaccess            (Status: 403) [Size: 278]                                    
+/.htaccess.php        (Status: 403) [Size: 278]                                    
+/.phtml               (Status: 403) [Size: 278]                                    
+/.htc                 (Status: 403) [Size: 278]                                    
+/.htc.php             (Status: 403) [Size: 278]                                    
+/.html_var_DE         (Status: 403) [Size: 278]                                    
+/.html_var_DE.php     (Status: 403) [Size: 278]                                    
+/server-status        (Status: 403) [Size: 278]                                    
+/.htpasswd            (Status: 403) [Size: 278]                                    
+/.htpasswd.php        (Status: 403) [Size: 278]                                    
+/.html.               (Status: 403) [Size: 278]                                    
+/.html..php           (Status: 403) [Size: 278]                                    
+/.html.html           (Status: 403) [Size: 278]                                    
+/.html.html.php       (Status: 403) [Size: 278]                                    
+/.htpasswds           (Status: 403) [Size: 278]                                    
+/.htpasswds.php       (Status: 403) [Size: 278]                                    
+Progress: 17016 / 126176 (13.49%)                                                 [ERROR] 2022/09/25 14:28:20 [!] Get "http://10.129.28.172/instructors": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+Progress: 20092 / 126176 (15.92%)                                                 [ERROR] 2022/09/25 14:28:55 [!] Get "http://10.129.28.172/dps.php": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+/.htm.                (Status: 403) [Size: 278]                                    
+/.htm..php            (Status: 403) [Size: 278]                                    
+/.htmll               (Status: 403) [Size: 278]                                    
+/.htmll.php           (Status: 403) [Size: 278]                                    
+/.phps                (Status: 403) [Size: 278]                                    
+/.html.old            (Status: 403) [Size: 278]                                    
+/.html.old.php        (Status: 403) [Size: 278]                                    
+/.ht                  (Status: 403) [Size: 278]                                    
+/.html.bak            (Status: 403) [Size: 278]                                    
+/.html.bak.php        (Status: 403) [Size: 278]                                    
+/.ht.php              (Status: 403) [Size: 278]                                    
+/.htm.htm             (Status: 403) [Size: 278]                                    
+/.htm.htm.php         (Status: 403) [Size: 278]                                    
+/.html1               (Status: 403) [Size: 278]                                    
+/.hta.php             (Status: 403) [Size: 278]                                    
+/.htgroup             (Status: 403) [Size: 278]                                    
+/.html1.php           (Status: 403) [Size: 278]                                    
+/.htgroup.php         (Status: 403) [Size: 278]                                    
+/.hta                 (Status: 403) [Size: 278]                                    
+/.html.LCK            (Status: 403) [Size: 278]                                    
+/.html.printable.php  (Status: 403) [Size: 278]                                    
+/.html.LCK.php        (Status: 403) [Size: 278]                                    
+/.html.printable      (Status: 403) [Size: 278]                                    
+/.htm.LCK             (Status: 403) [Size: 278]                                    
+/.htm.LCK.php         (Status: 403) [Size: 278]                                    
+/.htaccess.bak        (Status: 403) [Size: 278]                                    
+/.html.php            (Status: 403) [Size: 278]                                    
+/.htmls               (Status: 403) [Size: 278]                                    
+/.htx                 (Status: 403) [Size: 278]                                    
+/.htaccess.bak.php    (Status: 403) [Size: 278]                                    
+/.html.php.php        (Status: 403) [Size: 278]                                    
+/.htmls.php           (Status: 403) [Size: 278]                                    
+/.htx.php             (Status: 403) [Size: 278]                                    
+/cdn-cgi              (Status: 301) [Size: 316] [--> http://10.129.28.172/cdn-cgi/]
+/.htlm                (Status: 403) [Size: 278]                                    
+/.htlm.php            (Status: 403) [Size: 278]                                    
+/.htm2                (Status: 403) [Size: 278]                                    
+/.htuser              (Status: 403) [Size: 278]                                    
+/.html-               (Status: 403) [Size: 278]                                    
+/.htuser.php          (Status: 403) [Size: 278]                                    
+/.html-.php           (Status: 403) [Size: 278]                                    
+/.htm2.php            (Status: 403) [Size: 278]                                    
+/.htm.d               (Status: 403) [Size: 278]                                    
+/.htacess.php         (Status: 403) [Size: 278]                                    
+/.htm.html            (Status: 403) [Size: 278]                                    
+/.htm.old             (Status: 403) [Size: 278]                                    
+/.html.orig           (Status: 403) [Size: 278]                                    
+/.html-1              (Status: 403) [Size: 278]                                    
+/.html.sav            (Status: 403) [Size: 278]                                    
+/.htm.d.php           (Status: 403) [Size: 278]                                    
+/.htacess             (Status: 403) [Size: 278]                                    
+/.html_               (Status: 403) [Size: 278]                                    
+/.htm.html.php        (Status: 403) [Size: 278]                                    
+/.htm.old.php         (Status: 403) [Size: 278]                                    
+/.html-1.php          (Status: 403) [Size: 278]                                    
+/.html_files          (Status: 403) [Size: 278]                                    
+/.html.orig.php       (Status: 403) [Size: 278]                                    
+/.htmlpar             (Status: 403) [Size: 278]                                    
+/.html.sav.php        (Status: 403) [Size: 278]                                    
+/.htmlprint           (Status: 403) [Size: 278]                                    
+/.html_.php           (Status: 403) [Size: 278]                                    
+/.hts                 (Status: 403) [Size: 278]                                    
+/.html_files.php      (Status: 403) [Size: 278]                                    
+/.htmlpar.php         (Status: 403) [Size: 278]                                    
+/.hts.php             (Status: 403) [Size: 278]                                    
+/.htmlprint.php       (Status: 403) [Size: 278]                                    
+                                                                                   
+===============================================================
+2022/09/25 14:39:43 Finished
+===============================================================
