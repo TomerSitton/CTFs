@@ -1,0 +1,5 @@
+[url] - [code-200] - http://stocker.htb/
+[javascript] - http://stocker.htb/js/bootstrap.bundle.min.js
+[javascript] - http://stocker.htb/js/aos.js
+[linkfinder] - [from: http://stocker.htb/js/bootstrap.bundle.min.js] - text/html
+[linkfinder] - [from: http://stocker.htb/js/bootstrap.bundle.js] - text/html

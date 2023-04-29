@@ -1,0 +1,49 @@
+# recon #
+1. nmap shows ports 80,22. tried to scan all ports but nothing interesting
+2. web redirects to stocker.htb. added to hosts file
+
+# stocker.htb #
+looks like static html site. noting intersting
+1. has http://stocker.htb/img/webp/ folder. nothing fancy
+2. tried finding folders/files with feroxbuster and gospider - nothing. 
+3. persons: 
+	* Angoose Garden, Head of IT at Stockers Ltd.
+4. after seeing there is nothing interesting and its all static, tried to brute vhosts/subdomains with ffuf... and found dev.stocker.htb!
+
+# dev.stocker.htb #
+1. response header "X-Powered-By: Express" shows its a NodeJS Express application. There is only a login panel. from here there where some stuff todo:
+## Express "connect.sid" cookie - FAILED
+	1. got a "set-cookie" response that looked something like this: connect.sid=s%3AKB6DS-HtNCg8H4_H60ITzziQAFiFS4Do.Ui%2FjL5IjlE8H9H7UPhr3q7R%2BGOP30qTChIeCGjX2GoU. URL decoding it looks like s:KB6DS-HtNCg8H4_H60ITzziQAFiFS4Do.Ui/jL5IjlE8H9H7UPhr3q7R+GOP30qTChIeCGjX2GoU. This looks like random session ID value.  
+	2. maybe we cab craft other user connect.sid cookie...? 
+	3. according to hacktricks post (https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/nodejs-express), it is possible to decode Express sid cookies given the session cookie and a signature cookie. 
+	4. I tried to play with it for a bit but wasnt able to make this work (maybe because I don't have the signature cookie)
+## (no)SQL injection - SUCCESS!
+	1. tried some classic SQLi stuff using ffuf and the file dev-login.req, but it didnt seem to do anything interesting (sqlmap failed as well)
+	2. After some reading (and little wrieup peeking) I discovered that NodeJS is usually using mongoDB - A no sql database.
+	3. tried many, MANY payloads using the classic url-form parameters (POST data "username[$ne]=toto&password[$ne]=toto"), but nothing worked :(.
+	4. finally, I tried "POST with urlencoded body" and "POST with JSON body" python scripts for "Blind NOSQL" in PayloadAllTheThings (https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection). 
+	The urlencoded obvioslly didn't work (that was what I was trying before), but the json data returned errors on some characters! (see scripts/nosql-url.py, scripts/nosql-json.py, and /scripts/nosqli-json-output.txt)
+	5. tried to recreate the error on burp with the same payload, but it didnt work :(
+	more checking showed that the header "Content-Type: application/x-www-form-urlencoded" should be replaced with "Content-Type: application/json" in order for the payload to work. (see - requests/nosqli.req).
+	The actual payload:
+		{
+		"username" : {"$ne": "a" },
+		"password" : {"$ne": "a" }
+		}
+	6. got redirected to dev.stocker.htb/stock :)
+2. after the auth bypass, i could generate a pdf file with json data. trying ServerSide XSS worked!
+3. using some payloads and error paths i got from the sqli crashes, I was able to extract /etc/passwd and some of the source-code, along with a password!
+	* The fileread request - requests/large_iframe_fileread.req
+	* The fileread payload - "<iframe width=1000 height=1000 src=file:///var/www/dev/node_modules/raw-body/index.js></iframe>"
+	* The extraced password from the /var/www/dev/node_modules/raw-body/index.js file - IHeardPassphrasesArePrettySecure
+4. from passwd I saw the only user (other then root) with bash as SHELL is angoose. tried to log in with the password and... YES! I HAVE A SHELL!
+
+# getting root #
+sudo -l shows "Matching Defaults entries for angoose on stocker:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User angoose may run the following commands on stocker:
+    (ALL) /usr/bin/node /usr/local/scripts/*.js
+".
+creating a .js file anywhere and running it with sudo /usr/bin/node /usr/local/scripts/../../../tmp/get-root.js wins the game :)
+

